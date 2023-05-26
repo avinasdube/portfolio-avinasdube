@@ -41,7 +41,7 @@ body {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 20px;
+                padding: 10px;
                 font-family: $primaryfont;
                 gap: 20px;
 
@@ -60,119 +60,6 @@ body {
                     color: black;
                 }
 
-                .links {
-                    flex: 60%;
-                    display: flex;
-                    align-items: center;
-                    font-size: 20px;
-                    padding: 10px;
-                    gap: 40px;
-                    justify-content: right;
-
-                    .category {
-                        text-decoration: none;
-                        color: black;
-                    }
-                }
-
-                .redirect {
-                    flex: 5%;
-                    display: none;
-                    justify-content: right;
-
-                    .menudrop {
-                        display: grid;
-                        justify-content: center;
-                        align-items: center;
-                        border-radius: 2px;
-                        z-index: 5;
-
-                        .menu-trigger {
-                            display: grid;
-                            justify-items: center;
-                            align-content: center;
-                            height: 28px;
-                            width: 28px;
-                            cursor: pointer;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-
-                        .menu-trigger:active {
-                            img {
-                                animation: menuIcon 0.5s linear;
-                            }
-
-                            @keyframes menuIcon {
-                                0% {
-                                    transform: scale(0.2);
-                                }
-                            }
-                        }
-
-                        // Dropdown menu animation
-
-                        .dropdown-menu {
-                            display: grid;
-                            position: absolute;
-                            top: 110px;
-                            right: 65px;
-                            background-color: $c;
-                            width: 120px;
-                            border-radius: 4px;
-
-                            ul {
-
-                                li {
-                                    margin-left: -40px;
-                                    padding: 4px;
-                                    list-style: none;
-
-                                    .link {
-                                        margin-left: 20px;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 10px;
-                                        text-decoration: none;
-                                        color: black;
-                                        font-size: 20px;
-
-                                        img {
-                                            height: 20px;
-                                            width: 20px;
-                                        }
-                                    }
-                                }
-
-                                li:hover {
-                                    background: $c;
-
-                                    .link {
-                                        color: $d;
-                                    }
-                                }
-                            }
-                        }
-
-                        .dropdown-menu.active {
-                            opacity: 1;
-                            visibility: visible;
-                            transform: translateY(0px);
-                            transition: 0.2s ease-in;
-                        }
-
-                        .dropdown-menu.inactive {
-                            opacity: 0;
-                            visibility: hidden;
-                            transform: translateY(-20px);
-                            transform: 0.2s ease-in;
-                        }
-                    }
-                }
-
                 button {
                     background-color: $d;
                     font-family: $primaryfont;
@@ -185,80 +72,11 @@ body {
             }
         }
 
-        // FOOTER PAGE STYLING
-
-        footer {
-            background: linear-gradient($c, $b);
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-            gap: 40px;
-
-            .bottom {
-                width: 90%;
-                display: flex;
-                gap: 40px;
-                font-family: $primaryfont;
-                margin-bottom: 40px;
-
-                .bottomleft {
-                    width: 60%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-
-                    .hiremeHead {
-                        font-size: 8vw;
-                    }
-
-                    button {
-                        width: 20%;
-                        background-color: $d;
-                        font-family: 'Sujeta';
-                        border: none;
-                        border-radius: 8px;
-                        font-size: 20px;
-                    }
-
-                    .hiremeDesc {
-                        font-size: small;
-                        font-family: 'Microsoft New Tai Lue';
-                    }
-
-                    .copyright {
-                        font-size: 10px;
-                        font-family: 'Microsoft New Tai Lue';
-                    }
-                }
-
-                .bottomright {
-                    width: 40%;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-
-                    .connectHead {
-                        font-size: 7vw;
-                    }
-
-                    .connectLogo {
-                        display: flex;
-                        justify-content: space-between;
-                        gap: 10px;
-
-                        img {
-                            height: 60px;
-                            width: 60px;
-                        }
-                    }
-                }
-            }
-        }
-
         // HOME PAGE STYLING
 
         .home {
             header {
+                margin-top: -40px;
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
@@ -274,6 +92,7 @@ body {
                     gap: 20px;
 
                     .midleft {
+                        padding:0;
                         flex: 60%;
                         display: grid;
                         gap: 20px;
@@ -281,6 +100,12 @@ body {
                         .mlhead {
                             font-size: 8vw;
                             font-weight: bolder;
+                        }
+
+                        .professionTag{
+                            color: $d;
+                            margin-top: -10px;
+                            font-size: 3vw;
                         }
 
                         .mlmid {
@@ -301,19 +126,19 @@ body {
                             }
                         }
                     }
-                }
 
-                .midright {
-                    flex: 40%;
-                    display: grid;
-                    align-items: center;
-                    justify-content: right;
-
-                    img {
-                        height: 300px;
-                        width: 280;
-                        border-top-left-radius: 40px;
-                        border-bottom-right-radius: 40px;
+                    .midright {
+                        flex: 40%;
+                        display: grid;
+                        align-items: center;
+                        justify-content: right;
+    
+                        img {
+                            height: 300px;
+                            width: 280;
+                            border-top-left-radius: 40px;
+                            border-bottom-right-radius: 40px;
+                        }
                     }
                 }
             }
@@ -345,18 +170,35 @@ body {
                     width: 90%;
                     display: flex;
                     justify-content: space-between;
-                    transform: scale(0);
+                    opacity: 0;
+                    gap: 20px;
 
-                    img {
-                        height: 50px;
-                        width: 50px;
-                    }
                 }
 
                 .skillogoAnimate{
                     opacity: 1;
-                    transform: scale(1);
                     transition: 2s ease-in-out;
+                }
+
+                .skillCard{
+                    background: linear-gradient($b, $c);
+                    padding: 10px;
+                    height: 140px;
+                    width: 120px;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 10px;
+                    box-shadow: 4px 4px 4px gray;
+
+                    img{
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    .skillDetail{
+                        text-align: center;
+                    }
                 }
 
                 .aboutCard {
@@ -447,55 +289,127 @@ body {
                         text-align: center;
                     }
                 }
+
+                .achievements{
+                    width: 90%;
+                    border-radius: 10px;
+                    padding: 16px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    gap: 10px;
+
+                    .achievementsCard{
+                        background: linear-gradient($c, $b);
+                        box-shadow: 6px 6px 6px gray;
+                        width: 120px;
+                        height: 140px;
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        padding: 10px;
+                        border-radius: 10px;
+                        opacity: 0;
+
+                        .icon{
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+
+                            img{
+                                width: 50px;
+                                height: 50px;
+                            }
+                        }
+
+                        .achievementsDesc{
+                            text-align: center;
+                        }
+                    }
+
+                    .achievementsCardAnimate{
+                        opacity: 1;
+                        transition: 1s ease-in-out;
+                    }
+                }
             }
 
         }
 
-        // PROJECTS PAGE STYLING
+        // FOOTER PAGE STYLING
 
-        .projects {
-            padding: 20px;
+        footer {
+            background: linear-gradient($c, $b);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            background: linear-gradient($b, $c);
-            font-family: $primaryfont;
+            place-items: center;
             gap: 40px;
 
-            .projectshead {
-                font-family: $primaryfont;
-                font-size: 26px;
-                padding: 10px;
-                background-color: $d;
-                border-radius: 10px;
-                margin-top: 20px;
-            }
-
-            .projectCollage {
+            .bottom {
                 width: 90%;
                 display: flex;
-                align-items: center;
-                justify-content: center;
+                gap: 40px;
+                font-family: $primaryfont;
+                margin-bottom: 40px;
 
-                .projectsImg {
-                    display: grid;
+                .bottomleft {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
                     gap: 20px;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        border-radius: 10px;
+                    .hiremeHead {
+                        font-size: 8vw;
                     }
 
+                    button {
+                        width: 20%;
+                        background-color: $d;
+                        font-family: 'Sujeta';
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 20px;
+                    }
 
-                    img:hover {
-                        box-shadow: 0px 0px 20px $b;
-                        transition: 0.3s linear;
-                        transform: scale(1.01);
+                    .hiremeDesc {
+                        font-size: small;
+                        font-family: 'Microsoft New Tai Lue';
+                    }
+
+                    .copyright {
+                        font-size: 10px;
+                        font-family: 'Microsoft New Tai Lue';
                     }
                 }
 
+                .bottomright {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .connectHead {
+                        font-size: 7vw;
+                    }
+
+                    .connectLogo {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 10px;
+
+                        img {
+                            height: 60px;
+                            width: 60px;
+                        }
+
+                        img:hover{
+                            transform: scale(1.04);
+                            transition: 0.4s linear;
+                        }
+                    }
+                }
             }
         }
     }

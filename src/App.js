@@ -15,6 +15,10 @@ import develop from './images/icons/develop.png';
 import deploy from './images/icons/deploy.png';
 import { useInView } from 'react-intersection-observer';
 
+import projects from './images/icons/projects.png';
+import endorse from './images/icons/endorse.png';
+import client from './images/icons/client.png';
+
 import linkedin from './images/icons/linkedin.png';
 import instagram from './images/icons/instagram.png';
 import twitter from './images/icons/twitter.png';
@@ -29,6 +33,7 @@ function App() {
   const { ref: refDevelopScard, inView: developCardIsVisible } = useInView();
   const { ref: refDeployScard, inView: deployCardIsVisible } = useInView();
   const { ref: refNotaskScard, inView: notaskCardIsVisible } = useInView();
+  const { ref: refSkillScard, inView: skillCardIsVisible } = useInView();
 
   return (
     <div className="app">
@@ -42,13 +47,13 @@ function App() {
       </div>
 
       <div className='home'>
-
         <header>
           <div className='headermid' id='hdrmd'>
             <div className='midleft' id='mdlft'>
               <div className='mlhead'>
                 Namaskar, I am Avinash Dubey
               </div>
+              <div className='professionTag'>Web Developer</div>
               <div className='mlmid'>
                 I'm a web developer with a passion for creating dynamic and
                 user-friendly websites. I believe that clean and organized
@@ -71,12 +76,30 @@ function App() {
           </div>
 
           <div className={`skillogo ${skillsIsVisible ? `skillogoAnimate` : ``}`} id='sklgo' ref={refSkills}>
-            <div><img src={html} alt=''></img></div>
-            <div><img src={css} alt=''></img></div>
-            <div><img src={javascript} alt=''></img></div>
-            <div><img src={react} alt=''></img></div>
-            <div><img src={nodejs} alt=''></img></div>
-            <div><img src={git} alt=''></img></div>
+            <div className='skillCard'>
+              <img src={html} alt=''></img>
+              <div className='skillDetail'>HTML</div>
+            </div>
+            <div className='skillCard'>
+              <img src={css} alt=''></img>
+              <div className='skillDetail'>CSS</div>
+            </div>
+            <div className='skillCard'>
+              <img src={javascript} alt=''></img>
+              <div className='skillDetail'>JavaScript</div>
+            </div>
+            <div className='skillCard'>
+              <img src={react} alt=''></img>
+              <div className='skillDetail'>ReactJs</div>
+            </div>
+            <div className='skillCard'>
+              <img src={nodejs} alt=''></img>
+              <div className='skillDetail'>Node.Js</div>
+            </div>
+            <div className='skillCard'>
+              <img src={git} alt=''></img>
+              <div className='skillDetail'>Git</div>
+            </div>
           </div>
 
           <div className='aboutCard' id='abtcrd'>
@@ -99,7 +122,7 @@ function App() {
                 <img src={deploy} alt=''></img>
                 <div className='sright'>
                   <div className='shead'>I Deploy</div>
-                  <div className='sdescrip'>Design is what I believe in.</div>
+                  <div className='sdescrip'>Deployment is what I believe in.</div>
                 </div>
               </div>
             </div>
@@ -110,6 +133,21 @@ function App() {
 
           <div className='designQuote'>
             <div className='qt' id='qyt'>"Design is the art of creating visual poetry. Let me do some for you !"</div>
+          </div>
+
+          <div className='achievements'>
+            <div className={`achievementsCard ${skillCardIsVisible ? `achievementsCardAnimate` : ``}`} ref={refSkillScard}>
+              <div className='icon'><img src={projects} alt=''></img></div>
+              <div className='achievementsDesc'>10+ Projects</div>
+            </div>
+            <div className={`achievementsCard ${skillCardIsVisible ? `achievementsCardAnimate` : ``}`} ref={refSkillScard}>
+              <div className='icon'><img src={endorse} alt=''></img></div>
+              <div className='achievementsDesc'>50+ Endorsements</div>
+            </div>
+            <div className={`achievementsCard ${skillCardIsVisible ? `achievementsCardAnimate` : ``}`} ref={refSkillScard}>
+              <div className='icon'><img src={client} alt=''></img></div>
+              <div className='achievementsDesc'>5+ Clients</div>
+            </div>
           </div>
         </main>
 
@@ -125,7 +163,7 @@ function App() {
                 a skilled web developer, to take your online presence to the next level.
               </div>
               <div className='copyright'>
-                &copy; Avinash Dubey 2023, All Rights Reserved
+                &copy; 2023 Avinash Dubey . All Rights Reserved
               </div>
             </div>
 
@@ -140,7 +178,6 @@ function App() {
                 <a href='https://github.com/avinasdube'><img src={github} alt=''></img></a>
               </div>
             </div>
-
           </div>
         </footer>
 
