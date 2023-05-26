@@ -76,7 +76,7 @@ body {
 
         .home {
             header {
-                margin-top: -40px;
+                margin-top: -10px;
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
@@ -103,9 +103,14 @@ body {
                         }
 
                         .professionTag{
-                            color: $d;
+                            color: $c;
                             margin-top: -10px;
                             font-size: 3vw;
+                            background-color: $a;
+                            width: 80px;
+                            padding: 2px;
+                            text-align: center;
+                            border-radius: 6px;
                         }
 
                         .mlmid {
@@ -377,11 +382,6 @@ body {
                         font-size: small;
                         font-family: 'Microsoft New Tai Lue';
                     }
-
-                    .copyright {
-                        font-size: 10px;
-                        font-family: 'Microsoft New Tai Lue';
-                    }
                 }
 
                 .bottomright {
@@ -408,6 +408,11 @@ body {
                             transform: scale(1.04);
                             transition: 0.4s linear;
                         }
+                    }
+
+                    .copyright {
+                        font-size: 10px;
+                        font-family: 'Microsoft New Tai Lue';
                     }
                 }
             }
@@ -486,7 +491,7 @@ body {
         // FOOTER STYLING
 
         #btm {
-            flex-wrap: wrap-reverse;
+            flex-wrap: wrap;
 
             .bottomleft {
                 flex: 100%;
