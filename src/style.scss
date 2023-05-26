@@ -1,0 +1,590 @@
+$a: #262626;
+$b: #ACBFA4;
+$c: #f5f5f5;
+$d: #FF7F11;
+
+@font-face {
+    font-family: 'Sujeta';
+    src: url('./fonts/Sujeta.ttf') format("opentype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// DEFAULT FONTS
+
+$primaryfont: 'Sujeta';
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    .app {
+        width: 100%;
+
+
+        // NAVIGATION BAR STYLING
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: $b;
+
+            .navbarContainer {
+                background-color: $c;
+                border-radius: 10px;
+                width: 90%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                font-family: $primaryfont;
+                gap: 20px;
+
+                .logo {
+                    width: 140px;
+                    font-size: 20px;
+                    padding: 4px;
+                    display: grid;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 8px;
+                    font-family: $primaryfont;
+                    text-decoration: none;
+                    background-color: $d;
+                    color: black;
+                }
+
+                .links {
+                    flex: 60%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 20px;
+                    padding: 10px;
+                    gap: 40px;
+                    justify-content: right;
+
+                    .category {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+
+                .redirect {
+                    flex: 5%;
+                    display: none;
+                    justify-content: right;
+
+                    .menudrop {
+                        display: grid;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 2px;
+                        z-index: 5;
+
+                        .menu-trigger {
+                            display: grid;
+                            justify-items: center;
+                            align-content: center;
+                            height: 28px;
+                            width: 28px;
+                            cursor: pointer;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .menu-trigger:active {
+                            img {
+                                animation: menuIcon 0.5s linear;
+                            }
+
+                            @keyframes menuIcon {
+                                0% {
+                                    transform: scale(0.2);
+                                }
+                            }
+                        }
+
+                        // Dropdown menu animation
+
+                        .dropdown-menu {
+                            display: grid;
+                            position: absolute;
+                            top: 110px;
+                            right: 65px;
+                            background-color: $c;
+                            width: 120px;
+                            border-radius: 4px;
+
+                            ul {
+
+                                li {
+                                    margin-left: -40px;
+                                    padding: 4px;
+                                    list-style: none;
+
+                                    .link {
+                                        margin-left: 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 10px;
+                                        text-decoration: none;
+                                        color: black;
+                                        font-size: 20px;
+
+                                        img {
+                                            height: 20px;
+                                            width: 20px;
+                                        }
+                                    }
+                                }
+
+                                li:hover {
+                                    background: $c;
+
+                                    .link {
+                                        color: $d;
+                                    }
+                                }
+                            }
+                        }
+
+                        .dropdown-menu.active {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0px);
+                            transition: 0.2s ease-in;
+                        }
+
+                        .dropdown-menu.inactive {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(-20px);
+                            transform: 0.2s ease-in;
+                        }
+                    }
+                }
+
+                button {
+                    background-color: $d;
+                    font-family: $primaryfont;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 4px;
+                    font-size: 20px;
+                    width: 120px;
+                }
+            }
+        }
+
+        // FOOTER PAGE STYLING
+
+        footer {
+            background: linear-gradient($c, $b);
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            gap: 40px;
+
+            .bottom {
+                width: 90%;
+                display: flex;
+                gap: 40px;
+                font-family: $primaryfont;
+                margin-bottom: 40px;
+
+                .bottomleft {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .hiremeHead {
+                        font-size: 8vw;
+                    }
+
+                    button {
+                        width: 20%;
+                        background-color: $d;
+                        font-family: 'Sujeta';
+                        border: none;
+                        border-radius: 8px;
+                        font-size: 20px;
+                    }
+
+                    .hiremeDesc {
+                        font-size: small;
+                        font-family: 'Microsoft New Tai Lue';
+                    }
+
+                    .copyright {
+                        font-size: 10px;
+                        font-family: 'Microsoft New Tai Lue';
+                    }
+                }
+
+                .bottomright {
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .connectHead {
+                        font-size: 7vw;
+                    }
+
+                    .connectLogo {
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 10px;
+
+                        img {
+                            height: 60px;
+                            width: 60px;
+                        }
+                    }
+                }
+            }
+        }
+
+        // HOME PAGE STYLING
+
+        .home {
+            header {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                background: linear-gradient($b, $c);
+                font-family: $primaryfont;
+
+                .headermid {
+                    width: 92%;
+                    display: flex;
+                    margin-top: 20px;
+                    gap: 20px;
+
+                    .midleft {
+                        flex: 60%;
+                        display: grid;
+                        gap: 20px;
+
+                        .mlhead {
+                            font-size: 8vw;
+                            font-weight: bolder;
+                        }
+
+                        .mlmid {
+                            font-family: 'Microsoft New Tai Lue';
+                            font-size: 14px;
+                        }
+
+                        .mlfoot {
+                            button {
+                                background-color: $d;
+                                border: none;
+                                font-family: $primaryfont;
+                                font-size: 18px;
+                                padding: 2px;
+                                width: 80px;
+                                height: 30px;
+                                border-radius: 6px;
+                            }
+                        }
+                    }
+                }
+
+                .midright {
+                    flex: 40%;
+                    display: grid;
+                    align-items: center;
+                    justify-content: right;
+
+                    img {
+                        height: 300px;
+                        width: 280;
+                        border-top-left-radius: 40px;
+                        border-bottom-right-radius: 40px;
+                    }
+                }
+            }
+
+
+            main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 20px;
+                background: $c;
+                font-family: $primaryfont;
+
+                .mainhead {
+                    width: 90%;
+                    background-color: $d;
+                    border-radius: 8px;
+                    margin-top: 20px;
+
+                    .mheading {
+                        font-size: 30px;
+                        padding: 10px;
+                    }
+                }
+
+                .skillogo {
+                    opacity: 0;
+                    width: 90%;
+                    display: flex;
+                    justify-content: space-between;
+                    transform: scale(0);
+
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+
+                .skillogoAnimate{
+                    opacity: 1;
+                    transform: scale(1);
+                    transition: 2s ease-in-out;
+                }
+
+                .aboutCard {
+                    width: 90%;
+                    display: flex;
+                    gap: 20px;
+
+                    .leftcard {
+                        width: 55%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        gap: 20px;
+
+                        .scard {
+                            opacity: 0;
+                            display: flex;
+                            gap: 20px;
+                            background-color: $c;
+                            padding: 4px;
+                            border-radius: 20px;
+                            animation: linear;
+                            padding: 10px;
+                            box-shadow: 6px 6px 6px gray;
+
+                            img {
+                                width: 100px;
+                                height: 100px;
+                            }
+
+                            .sright {
+                                width: 80%;
+                                display: flex;
+                                gap: 5px;
+                                flex-direction: column;
+
+                                .shead {
+                                    font-size: 34px;
+                                    font-weight: bolder;
+                                }
+
+                                .sdescrip {
+                                    font-family: 'Microsoft New Tai Lue';
+                                }
+                            }
+                        }
+
+                        .scardAnimate{
+                            opacity: 1;
+                            transition: 1s ease-in-out;
+                        }
+
+                        .scard:hover {
+                            box-shadow: 5px 5px 5px $b;
+                            transition: 0.3s linear;
+                            transform: scale(1.01);
+                        }
+                        
+                    }
+
+                    .rightcard {
+                        opacity: 0;
+                        width: 45%;
+                        background: $c;
+                        display: flex;
+                        justify-content: center;
+                        border-radius: 20px;
+                        box-shadow: 6px 6px 6px gray;
+
+                        img {
+                            height: 380px;
+                            width: 400px;
+                        }
+                    }
+
+                    .rightcardAnimate{
+                        opacity: 1;
+                        transition: 1s ease-in-out;
+                    }
+                }
+
+                .designQuote {
+                    width: 70%;
+                    padding: 20px;
+
+                    .qt {
+                        font-size: 50px;
+                        text-align: center;
+                    }
+                }
+            }
+
+        }
+
+        // PROJECTS PAGE STYLING
+
+        .projects {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient($b, $c);
+            font-family: $primaryfont;
+            gap: 40px;
+
+            .projectshead {
+                font-family: $primaryfont;
+                font-size: 26px;
+                padding: 10px;
+                background-color: $d;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+
+            .projectCollage {
+                width: 90%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .projectsImg {
+                    display: grid;
+                    gap: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                    }
+
+
+                    img:hover {
+                        box-shadow: 0px 0px 20px $b;
+                        transition: 0.3s linear;
+                        transform: scale(1.01);
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .app {
+
+        // NAVIGATION BAR STYLING
+
+        #linkss {
+            display: none;
+        }
+
+        #rdrct {
+            display: flex;
+        }
+
+
+        // HOME PAGE STYLING
+
+        #hdrmd {
+            margin-top: -20px;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            #mdlft {
+                flex: 100%;
+                display: grid;
+                gap: 10px;
+            }
+
+            #mdrght {
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+
+            }
+        }
+
+        #sklgo {
+            flex-wrap: wrap;
+        }
+
+        #abtcrd {
+            flex-wrap: wrap;
+
+            .leftcard {
+                flex: 100%;
+            }
+
+            #abtrghtcrd {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+        }
+
+        // PROJECTS PAGE
+
+        #prjctimg {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        // FOOTER STYLING
+
+        #btm {
+            flex-wrap: wrap-reverse;
+
+            .bottomleft {
+                flex: 100%;
+
+                .hiremeDesc {
+                    font-size: small;
+                }
+            }
+
+            .bottomright {
+                flex: 100%;
+            }
+        }
+    }
+}
