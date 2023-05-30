@@ -105,9 +105,10 @@ body {
                         .professionTag{
                             color: $c;
                             margin-top: -10px;
-                            font-size: 3vw;
+                            font-size: 2vw;
                             background-color: $a;
-                            width: 80px;
+                            width:fit-content;
+                            min-width: 60px;
                             padding: 2px;
                             text-align: center;
                             border-radius: 6px;
@@ -259,7 +260,6 @@ body {
                         .scard:hover {
                             box-shadow: 5px 5px 5px $b;
                             transition: 0.3s linear;
-                            transform: scale(1.01);
                         }
                         
                     }
@@ -338,6 +338,138 @@ body {
                         opacity: 1;
                         transition: 1s ease-in-out;
                     }
+                }
+
+                .contactMe{
+                    background: linear-gradient($c, $b);
+                    width: 80%;
+                    padding: 20px;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    box-shadow: 6px 6px 6px gray;
+                    opacity: 0;
+
+                    .contactMeHeading{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .contactMeHead{
+                            font-size: 5vw;
+                        }
+
+                        .contactMeDescrip{
+                            font-size: 2.5vw;
+                        }
+                    }
+
+                    .contactMeForm{
+                        width: 96%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $c;
+                        padding: 20px;
+                        border-radius: 10px;
+
+                        .contactMeFormTop{
+                            width: 100%;
+                            display: flex;
+                            gap: 20px;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .contactMeFormRight{
+                                width: 40%;
+                                height: 300px;
+                                display: grid;
+                                padding: 4px;
+
+                                .formInputDiv{
+                                    display: grid;
+                                    gap: 10px;
+
+                                    label{
+                                        font-size: 24px;
+                                    }
+
+                                    input{
+                                        border: none;
+                                        border-radius: 8px;
+                                        outline: 2px solid #d9d9d9;
+                                        height: 40px;
+                                        width: 96%;
+                                        font-size: 16px;
+                                        padding: 4px;
+                                    }
+                                    
+                                    input:focus{
+                                        outline: 2px solid $b;
+                                    }
+                                }
+
+                            }
+
+                            .contactMeFormLeft{
+                                width: 60%;
+                                height: 300px;
+                                display: flex;
+                                flex-direction: column;
+                                padding: 4px;
+
+                                .rightInput{
+                                    height: 100%;
+                                    display: grid;
+
+                                    label{
+                                        font-size: 24px;
+                                    }
+    
+                                    textarea{
+                                        height: 238px;
+                                        width: 96%;
+                                        border: none;
+                                        border-radius: 8px;
+                                        outline: 2px solid #d9d9d9;
+                                        font-size: 16px;
+                                        padding: 4px;
+                                    }
+
+                                    textarea:focus{
+                                        outline: 2px solid $b;
+                                    }
+                                }
+                            }
+                        }
+
+                        .contactMeFormBottom{
+                            width: 100%;
+                            display: grid;
+                            align-items: center;
+                            justify-content: center;
+
+                            button{
+                                background-color: $d;
+                                border: none;
+                                border-radius: 8px;
+                                font-family: $primaryfont;
+                                font-size: 18px;
+                                padding: 6px;
+                            }
+                        }
+                    }
+                }
+
+                .contactMeAnimate{
+                    opacity: 1;
+                    transition: 1s ease-in-out;
                 }
             }
 
@@ -486,6 +618,20 @@ body {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
+        }
+
+        // CONTACT FORM STYLING
+
+        #frmtop{
+            flex-wrap: wrap;
+
+            .contactMeFormRight{
+                width: 100%;
+            }
+
+            .contactMeFormLeft{
+                width: 100%;
+            }
         }
 
         // FOOTER STYLING

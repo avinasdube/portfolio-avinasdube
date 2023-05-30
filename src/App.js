@@ -1,5 +1,10 @@
+// IMPORTING NECESSARY DEPENDENCIES
+
 import React from 'react';
 import './style.scss';
+import { useInView } from 'react-intersection-observer';
+
+// IMPORTING REQUIRED IMAGES AND FILES
 
 import av49 from './images/av49.jpg';
 import html from './images/icons/html.png';
@@ -13,7 +18,6 @@ import notasks from './images/notasks.png';
 import design from './images/icons/design.png';
 import develop from './images/icons/develop.png';
 import deploy from './images/icons/deploy.png';
-import { useInView } from 'react-intersection-observer';
 
 import projects from './images/icons/projects.png';
 import endorse from './images/icons/endorse.png';
@@ -34,6 +38,7 @@ function App() {
   const { ref: refDeployScard, inView: deployCardIsVisible } = useInView();
   const { ref: refNotaskScard, inView: notaskCardIsVisible } = useInView();
   const { ref: refSkillScard, inView: skillCardIsVisible } = useInView();
+  const { ref: refContactMeCard, inView: contactMeIsVisible } = useInView();
 
   return (
     <div className="app">
@@ -148,6 +153,38 @@ function App() {
               <div className='icon'><img src={client} alt=''></img></div>
               <div className='achievementsDesc'>5+ Clients</div>
             </div>
+          </div>
+
+          <div className={`contactMe ${contactMeIsVisible ? `contactMeAnimate` : ``}`} ref={refContactMeCard}>
+            <div className='contactMeHeading'>
+              <div className='contactMeHead'>Contact Me</div>
+              <div className='contactMeDescrip'>Contact me now to hire and let me build your website.</div>
+            </div>
+            <form className='contactMeForm'>
+              <div className='contactMeFormTop' id='frmtop'>
+                <div className='contactMeFormRight'>
+                  <div className='formInputDiv'>
+                    <label>Your Name</label>
+                    <input type='text' required></input>
+                  </div>
+                  <div className='formInputDiv'>
+                    <label>Your Email</label>
+                    <input type='email' required></input>
+                  </div>
+                  <div className='formInputDiv'>
+                    <label>Your Phone No.</label>
+                    <input type='text'></input>
+                  </div>
+                </div>
+                <div className='contactMeFormLeft'>
+                  <div className='rightInput'>
+                    <label>Your Message</label>
+                    <textarea></textarea>
+                  </div>
+                </div>
+              </div>
+              <div className='contactMeFormBottom'><button>Send Message</button></div>
+            </form>
           </div>
         </main>
 
