@@ -1,8 +1,9 @@
 // IMPORTING NECESSARY DEPENDENCIES
 
-import React from 'react';
 import './style.scss';
 import { useInView } from 'react-intersection-observer';
+
+import LoadingScreen from './components/Loader.jsx';
 
 // IMPORTING REQUIRED IMAGES AND FILES
 
@@ -27,8 +28,18 @@ import linkedin from './images/icons/linkedin.png';
 import instagram from './images/icons/instagram.png';
 import twitter from './images/icons/twitter.png';
 import github from './images/icons/github.png';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 3145);
+  }, []);
 
   // CODE TO IMPLEMENT 'ANIMATE ON SCROLL' FEATURE
 
@@ -40,13 +51,80 @@ function App() {
   const { ref: refSkillScard, inView: skillCardIsVisible } = useInView();
   const { ref: refContactMeCard, inView: contactMeIsVisible } = useInView();
 
+  // SETTING ARRAY OF SKILLS TO DISPLAY
+
+  const skillDetails = [
+    {
+      id: 1,
+      simg: html,
+      skill: "HTML"
+    },
+    {
+      id: 2,
+      simg: css,
+      skill: "CSS"
+    },
+    {
+      id: 3,
+      simg: javascript,
+      skill: "JavaScript"
+    },
+    {
+      id: 4,
+      simg: react,
+      skill: "ReactJs"
+    },
+    {
+      id: 5,
+      simg: nodejs,
+      skill: "Node.Js"
+    },
+    {
+      id: 6,
+      simg: git,
+      skill: "Git"
+    }
+  ];
+
+  // SETTING ARRAY OF KNOWN ABOUTS
+
+  const abouts = [
+    {
+      id: 1,
+      abtimg: design,
+      abthead: "I Design",
+      abtdescrip: "Design is in my veins. ",
+      ref: refDesignScard,
+      class: designCardIsVisible,
+    },
+    {
+      id: 2,
+      abtimg: develop,
+      abthead: "I Develop",
+      abtdescrip: "Development is in my gene.",
+      ref: refDevelopScard,
+      class: developCardIsVisible,
+    },
+    {
+      id: 3,
+      abtimg: deploy,
+      abthead: "I Deploy",
+      abtdescrip: "Deployment is what I believe in.",
+      ref: refDeployScard,
+      class: deployCardIsVisible,
+    }
+  ];
+
   return (
-    <div className="app">
+    <>
+    {loading ? <LoadingScreen /> :
+
+    (<div className="app">
       <div className="container">
         <div className="navigation">
           <div className='navbarContainer'>
             <div className="logo" >Avinash Dubey</div>
-            <button id='cntctme'>Contact Me</button>
+            <div className='cntButton'><button id='cntctme'>Contact Me</button></div>
           </div>
         </div>
       </div>
@@ -81,56 +159,27 @@ function App() {
           </div>
 
           <div className={`skillogo ${skillsIsVisible ? `skillogoAnimate` : ``}`} id='sklgo' ref={refSkills}>
-            <div className='skillCard'>
-              <img src={html} alt=''></img>
-              <div className='skillDetail'>HTML</div>
-            </div>
-            <div className='skillCard'>
-              <img src={css} alt=''></img>
-              <div className='skillDetail'>CSS</div>
-            </div>
-            <div className='skillCard'>
-              <img src={javascript} alt=''></img>
-              <div className='skillDetail'>JavaScript</div>
-            </div>
-            <div className='skillCard'>
-              <img src={react} alt=''></img>
-              <div className='skillDetail'>ReactJs</div>
-            </div>
-            <div className='skillCard'>
-              <img src={nodejs} alt=''></img>
-              <div className='skillDetail'>Node.Js</div>
-            </div>
-            <div className='skillCard'>
-              <img src={git} alt=''></img>
-              <div className='skillDetail'>Git</div>
-            </div>
+            {skillDetails.map(skill => (
+              <div className='skillCard' key={skill.id}>
+                <img src={skill.simg} alt=''></img>
+                <div className='skillDetail'>{skill.skill}</div>
+              </div>
+            ))}
           </div>
 
           <div className='aboutCard' id='abtcrd'>
             <div className='leftcard'>
-              <div className={`scard ${designCardIsVisible ? `scardAnimate` : ``}`} ref={refDesignScard}>
-                <img src={design} alt=''></img>
-                <div className='sright'>
-                  <div className='shead'>I Design</div>
-                  <div className='sdescrip'>Design is in my veins. </div>
+              {abouts.map(about => (
+                <div className={`scard ${about.class ? `scardAnimate` : ``}`} ref={about.ref} key={about.id}>
+                  <img src={about.abtimg} alt=''></img>
+                  <div className='sright'>
+                    <div className='shead'>{about.abthead}</div>
+                    <div className='sdescrip'>{about.abtdescrip}</div>
+                  </div>
                 </div>
-              </div>
-              <div id='dev' className={`scard ${developCardIsVisible ? `scardAnimate` : ``}`} ref={refDevelopScard}>
-                <img src={develop} alt=''></img>
-                <div className='sright'>
-                  <div className='shead'>I Develop</div>
-                  <div className='sdescrip'>Development is in my gene.</div>
-                </div>
-              </div>
-              <div className={`scard ${deployCardIsVisible ? `scardAnimate` : ``}`} ref={refDeployScard}>
-                <img src={deploy} alt=''></img>
-                <div className='sright'>
-                  <div className='shead'>I Deploy</div>
-                  <div className='sdescrip'>Deployment is what I believe in.</div>
-                </div>
-              </div>
+              ))}
             </div>
+
             <div className={`rightcard ${notaskCardIsVisible ? `rightcardAnimate` : ``}`} ref={refNotaskScard} id='abtrghtcrd'>
               <img src={notasks} alt=''></img>
             </div>
@@ -157,7 +206,7 @@ function App() {
 
           <div className={`contactMe ${contactMeIsVisible ? `contactMeAnimate` : ``}`} ref={refContactMeCard}>
             <div className='contactMeHeading'>
-              <div className='contactMeHead'>Contact Me</div>
+              <div className='contactMeHead' id='cntctMeHd'>Contact Me</div>
               <div className='contactMeDescrip'>Contact me now to hire and let me build your website.</div>
             </div>
             <form className='contactMeForm'>
@@ -217,9 +266,9 @@ function App() {
             </div>
           </div>
         </footer>
-
       </div>
-    </div>
+    </div>)}
+    </>
   )
 }
 

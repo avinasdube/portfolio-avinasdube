@@ -3,6 +3,8 @@ $b: #ACBFA4;
 $c: #f5f5f5;
 $d: #FF7F11;
 
+
+
 @font-face {
     font-family: 'Sujeta';
     src: url('./fonts/Sujeta.ttf') format("opentype");
@@ -20,10 +22,12 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: linear-gradient($b, $c);
 
     .app {
         width: 100%;
 
+       
 
         // NAVIGATION BAR STYLING
 
@@ -31,19 +35,24 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
             background: $b;
+            height: 100px;
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            width: 100%;
+            z-index: +4;
 
             .navbarContainer {
                 background-color: $c;
                 border-radius: 10px;
                 width: 90%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
+                height: 50px;
                 font-family: $primaryfont;
-                gap: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
 
                 .logo {
                     width: 140px;
@@ -58,16 +67,23 @@ body {
                     text-decoration: none;
                     background-color: $d;
                     color: black;
+                    position: absolute;
+                    left: 10px;
                 }
 
-                button {
-                    background-color: $d;
-                    font-family: $primaryfont;
-                    border: none;
-                    border-radius: 8px;
-                    padding: 4px;
-                    font-size: 20px;
-                    width: 120px;
+                .cntButton{
+                    position: absolute;
+                    right: 10px;
+
+                    button {
+                        background-color: $d;
+                        font-family: $primaryfont;
+                        border: none;
+                        border-radius: 8px;
+                        padding: 4px;
+                        font-size: 20px;
+                        width: 120px;
+                    }
                 }
             }
         }
@@ -76,20 +92,19 @@ body {
 
         .home {
             header {
-                margin-top: -10px;
-                padding: 20px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
-                background: linear-gradient($b, $c);
                 font-family: $primaryfont;
+                background: linear-gradient($b, $c);
+                margin-top: 100px;
 
                 .headermid {
-                    width: 92%;
+                    width: 90%;
                     display: flex;
-                    margin-top: 20px;
                     gap: 20px;
+                    padding: 0;
 
                     .midleft {
                         padding:0;
@@ -103,12 +118,13 @@ body {
                         }
 
                         .professionTag{
-                            color: $c;
+                            display: grid;
+                            align-items: center;
+                            color: $a;
                             margin-top: -10px;
-                            font-size: 2vw;
-                            background-color: $a;
-                            width:fit-content;
-                            min-width: 60px;
+                            font-size: 18px;
+                            background-color: $d;
+                            width: 100px;
                             padding: 2px;
                             text-align: center;
                             border-radius: 6px;
@@ -116,7 +132,7 @@ body {
 
                         .mlmid {
                             font-family: 'Microsoft New Tai Lue';
-                            font-size: 14px;
+                            font-size: 16px;
                         }
 
                         .mlfoot {
@@ -140,8 +156,8 @@ body {
                         justify-content: right;
     
                         img {
-                            height: 300px;
-                            width: 280;
+                            height: 400px;
+                            width: 340;
                             border-top-left-radius: 40px;
                             border-bottom-right-radius: 40px;
                         }
@@ -156,14 +172,14 @@ body {
                 align-items: center;
                 justify-content: space-between;
                 gap: 20px;
-                background: $c;
                 font-family: $primaryfont;
+                background-color: $c;
 
                 .mainhead {
                     width: 90%;
                     background-color: $d;
                     border-radius: 8px;
-                    margin-top: 20px;
+                    margin-top: 40px;
 
                     .mheading {
                         font-size: 30px;
@@ -176,7 +192,6 @@ body {
                     width: 90%;
                     display: flex;
                     justify-content: space-between;
-                    opacity: 0;
                     gap: 20px;
 
                 }
@@ -361,11 +376,11 @@ body {
                         justify-content: center;
 
                         .contactMeHead{
-                            font-size: 5vw;
+                            font-size: 8vw;
                         }
 
                         .contactMeDescrip{
-                            font-size: 2.5vw;
+                            font-size: 3.2vw;
                         }
                     }
 
@@ -404,8 +419,9 @@ body {
                                         border: none;
                                         border-radius: 8px;
                                         outline: 2px solid #d9d9d9;
-                                        height: 40px;
+                                        height: 30px;
                                         width: 96%;
+                                        font-family: $primaryfont;
                                         font-size: 16px;
                                         padding: 4px;
                                     }
@@ -433,13 +449,15 @@ body {
                                     }
     
                                     textarea{
-                                        height: 238px;
+                                        height: 225px;
                                         width: 96%;
                                         border: none;
                                         border-radius: 8px;
                                         outline: 2px solid #d9d9d9;
                                         font-size: 16px;
                                         padding: 4px;
+                                        font-family: $primaryfont;
+                                        resize: none;
                                     }
 
                                     textarea:focus{
@@ -569,14 +587,26 @@ body {
         // HOME PAGE STYLING
 
         #hdrmd {
-            margin-top: -20px;
             flex-wrap: wrap;
             gap: 20px;
 
             #mdlft {
                 flex: 100%;
                 display: grid;
-                gap: 10px;
+                gap: 20px;
+                
+                .mlhead{
+                    font-size: 14vw;
+                }
+
+                .mlmid{
+                    font-size: 14px;
+                }
+
+                .professionTag{
+                    font-size: 14px;
+                    width: 80px;
+                }
             }
 
             #mdrght {
@@ -621,6 +651,10 @@ body {
         }
 
         // CONTACT FORM STYLING
+
+        #cntctMeHd{
+            font-size: 30px;
+        }
 
         #frmtop{
             flex-wrap: wrap;
