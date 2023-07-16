@@ -1,0 +1,83 @@
+// FOOTER PAGE STYLING
+
+$a: #262626;
+$b: #ACBFA4;
+$c: #f5f5f5;
+$d: #FF7F11;
+
+// DEFAULT FONTS
+
+$primaryfont: 'Tw Cen MT';
+
+footer {
+    background: linear-gradient($c, $b);
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 40px;
+
+    .bottom {
+        width: 90%;
+        display: flex;
+        gap: 40px;
+        font-family: $primaryfont;
+        margin-bottom: 40px;
+
+        .bottomleft {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .hiremeHead {
+                font-size: 8vw;
+            }
+
+            button {
+                width: 20%;
+                background-color: $d;
+                font-family: 'Sujeta';
+                border: none;
+                border-radius: 8px;
+                font-size: 20px;
+            }
+
+            .hiremeDesc {
+                font-size: larger;
+                font-family: 'Microsoft New Tai Lue';
+            }
+        }
+
+        .bottomright {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .connectHead {
+                font-size: 7vw;
+            }
+
+            .connectLogo {
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+
+                img {
+                    height: 60px;
+                    width: 60px;
+                }
+
+                img:hover{
+                    transform: scale(1.04);
+                    transition: 0.4s linear;
+                }
+            }
+
+            .copyright {
+                font-size: 10px;
+                font-family: 'Microsoft New Tai Lue';
+            }
+        }
+    }
+}

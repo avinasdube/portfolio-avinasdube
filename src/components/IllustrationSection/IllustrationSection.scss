@@ -1,0 +1,100 @@
+// ILLUSTRATION SECTION STYLING
+
+$a: #262626;
+$b: #ACBFA4;
+$c: #f5f5f5;
+$d: #FF7F11;
+
+// DEFAULT FONTS
+
+$primaryfont: 'Tw Cen MT';
+
+.illustrationSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: $primaryfont;
+    background-color: $c;
+
+    .aboutCard {
+        width: 90%;
+        display: flex;
+        gap: 20px;
+        margin-top: 40px;
+    
+        .leftcard {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+    
+            .scard {
+                opacity: 0;
+                display: flex;
+                gap: 20px;
+                background-color: $c;
+                padding: 4px;
+                border-radius: 20px;
+                animation: linear;
+                padding: 10px;
+                box-shadow: 6px 6px 6px gray;
+    
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+    
+                .sright {
+                    width: 80%;
+                    display: flex;
+                    gap: 5px;
+                    flex-direction: column;
+    
+                    .shead {
+                        font-size: 34px;
+                        font-weight: bolder;
+                    }
+    
+                    .sdescrip {
+                        font-family: 'Microsoft New Tai Lue';
+                    }
+                }
+            }
+    
+            .scardAnimate{
+                opacity: 1;
+                transition: 1s ease-in-out;
+            }
+    
+            .scard:hover {
+                box-shadow: 5px 5px 5px $b;
+                transition: 0.3s linear;
+            }
+            
+        }
+    
+        .rightcard {
+            opacity: 0;
+            width: 45%;
+            background: $c;
+            display: flex;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 6px 6px 6px gray;
+    
+            img {
+                height: 380px;
+                width: 400px;
+            }
+        }
+    
+        .rightcardAnimate{
+            opacity: 1;
+            transition: 1s ease-in-out;
+        }
+    }
+}
+

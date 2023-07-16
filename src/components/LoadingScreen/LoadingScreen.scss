@@ -1,15 +1,8 @@
  // LOADING SCREEN
 
- $gap: 6px;
- $first-color: #262626;
- $second-color: #FF7F11;
- $third-color: #262626;
- $fourth-color: #FF7F11;
- $fifth-color: #262626;
-
  @font-face {
     font-family: 'Sujeta';
-    src: url('../fonts/Sujeta.ttf') format("opentype");
+    src: url('../../fonts/Sujeta.ttf') format("opentype");
 }
 
  .classlaoder_container {

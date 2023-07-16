@@ -1,7 +1,7 @@
-import React from "react";
-import './Loader.scss';
+import React from 'react';
+import './LoadingScreen.scss';
 
-const Loader = () => {
+const LoadingScreen = () => {
   return (
     <>
       <div className='classlaoder_container'>
@@ -22,7 +22,7 @@ const Loader = () => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Loader;
+export default LoadingScreen

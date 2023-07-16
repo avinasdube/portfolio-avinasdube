@@ -1,0 +1,87 @@
+// NAVIGATION BAR STYLING
+
+$a: #262626;
+$b: #ACBFA4;
+$c: #f5f5f5;
+$d: #FF7F11;
+
+// DEFAULT FONTS
+
+$primaryfont: 'Tw Cen MT';
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $b;
+    height: 100px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: +4;
+
+    .navbarContainer {
+        background-color: $c;
+        border-radius: 10px;
+        width: 90%;
+        height: 60px;
+        font-family: $primaryfont;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .navLeft{
+            display: flex;
+            gap: 15px;
+            position: absolute;
+            left: 10px;
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+
+            .logo {
+                font-size: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: $primaryfont;
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .cntButton{
+            position: absolute;
+            right: 10px;
+
+            button {
+                font-family: $primaryfont;
+                border: none;
+                font-size: 24px;
+                background: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    // NAVIGATION BAR STYLING
+
+    #lgo{
+        font-size: 20px;
+    }
+
+    #lgimg{
+        width: 25px;
+        height: 25px;
+    }
+
+    #cntctme{
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,22 @@
+// QUOTE SECTION STYLING
+
+$c: #f5f5f5;
+
+// DEFAULT FONTS
+
+$primaryfont: 'Tw Cen MT';
+
+.designQuote {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: $c;
+
+    .qt {
+        font-family: $primaryfont;
+        font-size: 50px;
+        text-align: center;
+        width: 70%;
+    }
+}

@@ -1,0 +1,74 @@
+// EXPERTISE SECTION STYLING
+
+$a: #262626;
+$b: #ACBFA4;
+$c: #f5f5f5;
+$d: #FF7F11;
+
+// DEFAULT FONTS
+
+$primaryfont: 'Tw Cen MT';
+
+.expertiseSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: $primaryfont;
+    background-color: $c;
+
+
+    .mainhead {
+        width: 90%;
+        background-color: $d;
+        border-radius: 8px;
+        margin-top: 40px;
+    
+        .mheading {
+            font-size: 30px;
+            padding: 10px;
+        }
+    }
+    
+    .skillogo {
+        opacity: 0;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    
+    }
+    
+    .skillogoAnimate{
+        opacity: 1;
+        transition: 2s ease-in-out;
+    }
+    
+    .skillCard{
+        background: linear-gradient($b, $c);
+        padding: 10px;
+        height: 140px;
+        width: 120px;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 4px 4px 4px gray;
+    
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    
+        .skillDetail{
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #sklgo {
+        flex-wrap: wrap;
+    }
+}
