@@ -31,7 +31,10 @@ const FooterSection = () => {
                 <a href='https://github.com/avinasdube'><img src={github} alt=''></img></a>
               </div>
               <div className='copyright'>
-                &copy; 2023 Avinash Dubey . All Rights Reserved
+                &copy; 2023 Avinash Dubey . All Rights Reserved 
+              </div>
+              <div className='tagline'>
+                सर्वं सम्भाव्यते त्वयि।
               </div>
             </div>
           </div>
