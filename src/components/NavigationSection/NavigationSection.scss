@@ -30,14 +30,12 @@ $primaryfont: 'Tw Cen MT';
         font-family: $primaryfont;
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        justify-content: space-between;
 
         .navLeft{
             display: flex;
             gap: 15px;
-            position: absolute;
-            left: 10px;
+            margin-left: 20px;
 
             img{
                 width: 30px;
@@ -56,15 +54,21 @@ $primaryfont: 'Tw Cen MT';
             }
         }
 
-        .cntButton{
-            position: absolute;
-            right: 10px;
+        .navRight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkgoldenrod;
+            margin-right: 20px;
 
-            button {
-                font-family: $primaryfont;
-                border: none;
-                font-size: 24px;
-                background: none;
+            img {
+                height: 40px;
+                width: 40px;
+            }
+
+            img:hover{
+                transform: scale(1.04);
+                transition: 0.4s linear;
             }
         }
     }
@@ -82,7 +86,9 @@ $primaryfont: 'Tw Cen MT';
         height: 25px;
     }
 
-    #cntctme{
-        font-size: 20px;
+    #cnctlgo{
+        width: 20px;
+        height: 20px;
     }
+    
 }
