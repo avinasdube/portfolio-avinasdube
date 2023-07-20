@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-avinasdube/static/css/main.e5016985.css",
-    "main.js": "/portfolio-avinasdube/static/js/main.82a8668f.js",
+    "main.css": "/portfolio-avinasdube/static/css/main.725eb20f.css",
+    "main.js": "/portfolio-avinasdube/static/js/main.62faf13d.js",
     "static/media/notasks.png": "/portfolio-avinasdube/static/media/notasks.d3a308e4848277949722.png",
     "static/media/weatherin.jpg": "/portfolio-avinasdube/static/media/weatherin.399ac5c0cdd4d5262ace.jpg",
     "static/media/av49.jpg": "/portfolio-avinasdube/static/media/av49.3b3f55af1c245b3f5e2e.jpg",
@@ -19,11 +19,11 @@
     "static/media/git.png": "/portfolio-avinasdube/static/media/git.a00e31cd64596a16de37.png",
     "static/media/twitter.png": "/portfolio-avinasdube/static/media/twitter.a122107f9b9ca0a69f5f.png",
     "index.html": "/portfolio-avinasdube/index.html",
-    "main.e5016985.css.map": "/portfolio-avinasdube/static/css/main.e5016985.css.map",
-    "main.82a8668f.js.map": "/portfolio-avinasdube/static/js/main.82a8668f.js.map"
+    "main.725eb20f.css.map": "/portfolio-avinasdube/static/css/main.725eb20f.css.map",
+    "main.62faf13d.js.map": "/portfolio-avinasdube/static/js/main.62faf13d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5016985.css",
-    "static/js/main.82a8668f.js"
+    "static/css/main.725eb20f.css",
+    "static/js/main.62faf13d.js"
   ]
 }
