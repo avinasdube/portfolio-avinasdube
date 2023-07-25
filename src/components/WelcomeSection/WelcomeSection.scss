@@ -39,14 +39,14 @@ $primaryfont: 'Tw Cen MT';
                 display: grid;
                 align-items: center;
                 margin-top: -10px;
-                font-family: 'Microsoft New Tai Lue';
+                font-family: 'system-ui';
                 font-size: 12px;
-                font-weight: bolder;
-                background-color: gray;
-                width: 100px;
-                padding: 2px;
+                font-weight: 500;
+                background-color: $b;
+                width: fit-content;
+                padding: 4px 10px;
                 text-align: center;
-                border-radius: 6px;
+                border-radius: 5px;
             }
 
             .mlmid {
@@ -108,7 +108,6 @@ $primaryfont: 'Tw Cen MT';
 
             .professionTag{
                 font-size: 12px;
-                width: 80px;
             }
         }
 

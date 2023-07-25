@@ -14,17 +14,17 @@ const FooterSection = () => {
               <div className='hiremeHead'>
                 Hire me today !
               </div>
-              <div className='hiremeDesc'>
+              <div className='hiremeDesc' id='hrmdsk'>
                 Unlock your website's full potential with my expertise. Hire me,
                 a skilled web developer, to take your online presence to the next level.
               </div>
             </div>
 
-            <div className='bottomright'>
+            <div className='bottomright' id='btmrght'>
               <div className='connectHead'>
                 Connect with me on :
               </div>
-              <div className='connectLogo' id='cnctlgo'>
+              <div className='connectLogo' id='contlgo'>
                 <a href='https://www.linkedin.com/in/avinasdube/'><img src={linkedin} alt=''></img></a>
                 <a href='http://www.instagram.com/avinas.dube/'><img src={instagram} alt=''></img></a>
                 <a href='https://www.twitter.com/avinaasdube/'><img src={twitter} alt=''></img></a>

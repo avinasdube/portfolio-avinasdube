@@ -5,7 +5,6 @@ import linkedin from '../../images/icons/linkedin.png';
 
 const NavigationSection = () => {
   return (
-    <div className="container">
       <div className="navigation">
         <div className='navbarContainer'>
           <div className='navLeft'>
@@ -14,7 +13,6 @@ const NavigationSection = () => {
           </div>
           <div className='navRight' id='cnctlgo'><a href='https://www.linkedin.com/in/avinasdube/'><img src={linkedin} alt=''></img></a></div>
         </div>
-      </div>
     </div>
   )
 }

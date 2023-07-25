@@ -98,3 +98,17 @@ $primaryfont: 'Tw Cen MT';
     }
 }
 
+@media only screen and (max-width: 800px){
+    #abtcrd{
+        flex-direction: column;
+
+        .leftcard{
+            width: auto;
+        }
+
+        .rightcard{
+            width: auto;
+        }
+    }
+}
+

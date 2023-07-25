@@ -9,10 +9,10 @@ import ExpertiseSection from './components/ExpertiseSection/ExpertiseSection';
 import IllustrationSection from './components/IllustrationSection/IllustrationSection';
 import QuoteSection from './components/QuoteSection/QuoteSection';
 import AchievementSection from './components/AchievementSection/AchievementSection';
+import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import FooterSection from './components/FooterSection/FooterSection';
 
 import { useEffect, useState } from 'react';
-import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 
 function App() {
 

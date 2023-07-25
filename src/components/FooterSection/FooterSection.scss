@@ -7,7 +7,7 @@ $d: #FF7F11;
 
 // DEFAULT FONTS
 
-$primaryfont: 'Tw Cen MT';
+$primaryfont: 'system-ui';
 
 footer {
     background: linear-gradient($c, $b);
@@ -24,22 +24,13 @@ footer {
         margin-bottom: 40px;
 
         .bottomleft {
-            width: 60%;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
             .hiremeHead {
-                font-size: 8vw;
-            }
-
-            button {
-                width: 20%;
-                background-color: $d;
-                font-family: 'Sujeta';
-                border: none;
-                border-radius: 8px;
-                font-size: 20px;
+                font-size: 6vw;
+                font-weight: 500;
             }
 
             .hiremeDesc {
@@ -49,19 +40,20 @@ footer {
         }
 
         .bottomright {
-            width: 40%;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
             .connectHead {
-                font-size: 7vw;
+                font-size: 6vw;
+                font-weight: 500;
             }
 
             .connectLogo {
+                flex: 100%;
                 display: flex;
                 justify-content: space-between;
-                gap: 10px;
+
 
                 img {
                     height: 60px;
@@ -75,15 +67,39 @@ footer {
             }
 
             .copyright {
-                font-size: 12px;
-                font-family: 'Microsoft New Tai Lue';
+                font-size: 14px;
             }
 
             .tagline{
-                margin-top: -15px;
-                font-size: 12px;
-                font-family: 'Microsoft New Tai Lue';
+                font-size: 14px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #btm{
+        flex-direction: column;
+    }
+
+    #hrmdsk{
+        font-size: 14px;
+    }
+
+    #btmrght{
+        .copyright{
+            font-size: 12px;
+        }
+        
+        .tagline{
+            font-size: 12px;
+        }
+    }
+
+    #contlgo{
+        img {
+            height: 50px;
+            width: 50px;
         }
     }
 }
