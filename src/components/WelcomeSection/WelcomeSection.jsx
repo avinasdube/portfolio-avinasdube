@@ -10,17 +10,15 @@ const WelcomeSection = () => {
       <div className='headermid' id='hdrmd'>
         <div className='midleft' id='mdlft'>
           <div className='mlhead'>
-            Namaskar, I am Avinash Dubey
+            namaskar, i am avinash dubey
           </div>
-          <div className='professionTag'>Web Developer</div>
           <div className='mlmid'>
-            I'm a web developer with a passion for creating dynamic and
-            user-friendly websites. I believe that clean and organized
-            code is key to building successful websites that are both
-            efficient and easy to maintain.
-          </div>
-          <div className='mlfoot'>
-            <button>Mail Me</button>
+            a web-developer fascinated by the change in
+            world of web technology. i specialize in 
+            mern stack and react gives me confidence. 
+            i find similarity between writing codes and poetry.
+            my work defines my consistency. open sourcing drives
+            me.
           </div>
         </div>
         <div className='midright' id='mdrght'>

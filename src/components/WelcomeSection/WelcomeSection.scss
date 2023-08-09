@@ -1,13 +1,7 @@
-// WELCOME SECTION STYLING
-
-$a: #262626;
-$b: #ACBFA4;
-$c: #f5f5f5;
-$d: #FF7F11;
 
 // DEFAULT FONTS
 
-$primaryfont: 'Tw Cen MT';
+$primaryfont: 'Encode Sans', sans-serif;
 
 .welcomeSection {
     display: flex;
@@ -15,58 +9,28 @@ $primaryfont: 'Tw Cen MT';
     align-items: center;
     justify-content: space-between;
     font-family: $primaryfont;
-    background: linear-gradient($b, $c);
-    margin-top: 100px;
+    margin-top: 80px;
 
     .headermid {
         width: 90%;
         display: flex;
         gap: 20px;
         padding: 0;
+        margin-bottom: 20px;
 
         .midleft {
             padding:0;
             flex: 60%;
             display: grid;
-            gap: 20px;
+            gap: 10px;
 
             .mlhead {
-                font-size: 7vw;
+                font-size: 80px;
                 font-weight: bolder;
             }
 
-            .professionTag{
-                display: grid;
-                align-items: center;
-                margin-top: -10px;
-                font-family: 'system-ui';
-                font-size: 12px;
-                font-weight: 500;
-                background-color: $b;
-                width: fit-content;
-                padding: 4px 10px;
-                text-align: center;
-                border-radius: 5px;
-            }
-
             .mlmid {
-                font-family: 'Microsoft New Tai Lue';
                 font-size: 16px;
-            }
-
-            .mlfoot {
-                button {
-                    background-color: $d;
-                    border: none;
-                    font-family: $primaryfont;
-                    font-size: 14px;
-                    font-weight: bolder;
-                    padding: 2px;
-                    width: 60px;
-                    height: 30px;
-                    border-radius: 6px;
-                    cursor: pointer;
-                }
             }
         }
 
@@ -77,12 +41,45 @@ $primaryfont: 'Tw Cen MT';
             justify-content: right;
 
             img {
-                height: 400px;
-                width: 340;
+                height: 300px;
+                width: 300px;
                 border-top-left-radius: 40px;
                 border-bottom-right-radius: 40px;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    // WELCOME SECTION STYLING
+
+    #hdrmd {
+
+        #mdlft {
+            padding:0;
+            flex: 60%;
+            display: grid;
+            gap: 10px;
+            
+            .mlhead{
+                font-size: 60px;
+            }
+
+            .mlmid{
+                font-size: 15px;
+            }
+        }
+
+        #mdrght {
+
+            img {
+                height: 260px;
+                width: 260px;
+            }
+
+        }
+
+        
     }
 }
 
@@ -95,19 +92,19 @@ $primaryfont: 'Tw Cen MT';
 
         #mdlft {
             flex: 100%;
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
             
             .mlhead{
-                font-size: 14vw;
+                flex: 100%;
+                font-size: 50px;
             }
 
             .mlmid{
+                flex: 100%;
                 font-size: 14px;
-            }
-
-            .professionTag{
-                font-size: 12px;
+                line-height: 25px;
             }
         }
 
@@ -121,3 +118,4 @@ $primaryfont: 'Tw Cen MT';
         }
     }
 }
+
