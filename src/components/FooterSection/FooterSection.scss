@@ -1,52 +1,58 @@
-// FOOTER PAGE STYLING
-
-$a: #262626;
-$b: #ACBFA4;
-$c: #f5f5f5;
-$d: #FF7F11;
-
 // DEFAULT FONTS
 
-$primaryfont: 'system-ui';
+$primaryfont: 'Encode Sans', sans-serif;
 
 footer {
-    background: linear-gradient($c, $b);
+    background-color: white;
     display: flex;
     flex-direction: column;
     place-items: center;
     gap: 40px;
+    padding: 20px 0;
 
     .bottom {
         width: 90%;
         display: flex;
-        gap: 40px;
+        gap: 20px;
         font-family: $primaryfont;
-        margin-bottom: 40px;
 
         .bottomleft {
+            flex: 50%;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
             .hiremeHead {
-                font-size: 6vw;
-                font-weight: 500;
+                span{
+                    background-color: saddlebrown;
+                    width: 40px;
+                    height: 40px;
+                }
+                
+                font-size: 60px;
+                font-weight: bolder;
             }
 
             .hiremeDesc {
-                font-size: larger;
-                font-family: 'Microsoft New Tai Lue';
+                font-size: 16px;
             }
         }
 
         .bottomright {
+            flex: 50%;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
             .connectHead {
-                font-size: 6vw;
-                font-weight: 500;
+                span{
+                    background-color: red;
+                    width: 40px;
+                    height: 2px;
+                }
+                
+                font-size: 60px;
+                font-weight: bolder;
             }
 
             .connectLogo {
@@ -56,8 +62,8 @@ footer {
 
 
                 img {
-                    height: 60px;
-                    width: 60px;
+                    height: 50px;
+                    width: 50px;
                 }
 
                 img:hover{
@@ -77,16 +83,84 @@ footer {
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
     #btm{
         flex-direction: column;
+        gap: 40px;
     }
 
-    #hrmdsk{
-        font-size: 14px;
+    #hrmhd{
+        span{
+            width: 40px;
+            height: 2px;
+        }
+        
+        font-size: 40px;
     }
 
     #btmrght{
+        .connectHead{
+            span{
+                width: 40px;
+                height: 2px;
+            }
+            
+            font-size: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #hrmhd{
+        span{
+            width: 40px;
+            height: 2px;
+        }
+        
+        font-size: 30px;
+    }
+
+    #hrmdsk{
+        font-size: 15px;
+    }
+
+    #btmrght{
+        .connectHead{
+            span{
+                width: 40px;
+                height: 2px;
+            }
+            
+            font-size: 30px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 400px){
+    #hrmhd{
+        span{
+            width: 40px;
+            height: 2px;
+        }
+        
+        font-size: 24px;
+    }
+
+    #hrmdsk{
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #btmrght{
+        .connectHead{
+            span{
+                width: 40px;
+                height: 2px;
+            }
+            
+            font-size: 24px;
+        }
         .copyright{
             font-size: 12px;
         }
@@ -98,8 +172,9 @@ footer {
 
     #contlgo{
         img {
-            height: 50px;
-            width: 50px;
+            height: 40px;
+            width: 40px;
+            margin-left: -4px;
         }
     }
 }

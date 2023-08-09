@@ -9,8 +9,9 @@ $primaryfont: 'Encode Sans', sans-serif;
     align-items: center;
     justify-content: space-between;
     font-family: $primaryfont;
-    margin-top: 80px;
+    margin-top: 70px;
     background-color: white;
+    padding: 20px 0;
 
     .headermid {
         width: 90%;
@@ -63,12 +64,13 @@ $primaryfont: 'Encode Sans', sans-serif;
             gap: 10px;
             
             .mlhead{
-                font-size: 60px;
+                font-size: 64px;
             }
 
             .mlmid{
-                font-size: 15px;
+                line-height: 25px;
             }
+            
         }
 
         #mdrght {
@@ -103,8 +105,8 @@ $primaryfont: 'Encode Sans', sans-serif;
             }
 
             .mlmid{
-                flex: 100%;
-                font-size: 14px;
+                width: 90%;
+                font-size: 15px;
                 line-height: 25px;
             }
         }
@@ -116,6 +118,18 @@ $primaryfont: 'Encode Sans', sans-serif;
                 width: 100%;
             }
 
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #hdrmd {
+
+        #mdlft {
+            
+            .mlhead{
+                font-size: 46px;
+            }
         }
     }
 }

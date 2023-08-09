@@ -36,6 +36,7 @@ function App() {
           <WelcomeSection />
           <QuoteSection />
           <ProjectsSection />
+          <FooterSection />
         </div>)}
     </>
   )

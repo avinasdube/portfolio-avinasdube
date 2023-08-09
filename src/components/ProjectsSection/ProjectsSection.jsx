@@ -1,7 +1,6 @@
 import React from 'react';
 import './ProjectsSection.scss';
 
-import upright from '../../images/icons/upright.png';
 import mytask from '../../images/mytasks.jpg';
 import calculator from '../../images/calculator.jpg';
 import weatherin from '../../images/weatherin.jpg';
@@ -37,7 +36,7 @@ const ProjectsSection = () => {
 
     return (
         <div className='projectsSection'>
-            <div className="projectsHead" id='prjcthd'><span></span>my works <img src={upright} alt=''></img></div>
+            <div className="projectsHead" id='prjcthd'><span></span>my works</div>
             <div className="projectsGrid" id='prjctgrd'>
                 {
                     projects.map(project => (
