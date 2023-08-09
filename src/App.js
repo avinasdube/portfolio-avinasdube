@@ -32,15 +32,8 @@ function App() {
       {loading ? <LoadingScreen /> :
 
         (<div className="app">
-
           <NavigationSection />
           <WelcomeSection />
-          <ExpertiseSection />
-          <IllustrationSection />
-          <QuoteSection />
-          <AchievementSection />
-          <ProjectsSection />
-          <FooterSection />
         </div>)}
     </>
   )
