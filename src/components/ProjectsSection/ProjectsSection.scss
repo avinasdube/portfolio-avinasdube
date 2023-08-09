@@ -1,143 +1,163 @@
-// EXPERTISE SECTION STYLING
-
-$a: #262626;
-$b: #ACBFA4;
-$c: #f5f5f5;
-$d: #FF7F11;
-
 // DEFAULT FONTS
 
-$primaryfont: 'Tw Cen MT';
+$primaryfont: 'Encode Sans', sans-serif;
 
 .projectsSection{
-    width: auto;
-    background: $c;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    font-family: $primaryfont;
+    background-color: white;
 
     .projectsHead{
-        font-size: 80px;
-        font-family: $primaryfont;
-        font-weight: 500;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        font-size: 50px;
+        font-weight: bolder;
+
+        span{
+            background-color: black;
+            width: 100px;
+            height: 3px;
+            margin-right: 10px;
+        }
+
+        img{
+            width: 50px;
+            height: 50px;
+            margin-bottom: -10px;
+        }
+        
     }
 
     .projectsGrid{
-        padding: 20px;
-        width: fit-content;
-        display: grid;
-        grid-template-columns: 500px 500px;
-        column-gap: 40px;
-        justify-content: center;
-        align-items: center;
-        row-gap: 20px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        padding: 20px 0;
 
         .projectCard{
-            background: linear-gradient($c, $b);
-            backdrop-filter: blur(40px);
-            width: fit-content;
-            height: fit-content;
-            padding: 20px;
-            border-radius: 10px;
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            box-shadow: 6px 6px 6px gray;
+            gap: 50px;
 
             .projectImage{
-                width: 460px;
-                height: 240px;
 
                 img{
-                    width: 100%;
-                    height: 100%;
+                    width: 540px;
+                    height: 280px;
                     object-fit: cover;
                     border-radius: 10px;
                 }
             }
 
-            .projectName{
-                font-family: $primaryfont;
-                font-size: 22px;
-                font-weight: bold;
-            }
+            
 
-            .projectAction{
+            .projectAbout{
                 width: auto;
                 display: flex;
-                justify-content: space-between;
+                flex-direction: column;
+                gap: 10px;
 
-                a{
-                    text-decoration: none;
-                    color: black;
-                    background-color: $d;
-                    border: none;
-                    border-radius: 10px;                                                      
-                    padding: 10px 20px;
+                .projectName{
                     font-family: $primaryfont;
-                    font-size: 18px;
-                    font-weight: bold;
+                    font-size: 40px;
+                    font-weight: bolder;
                 }
 
-                a:hover{
-                    background-color: #e86c00;
+                .projectDescrip{
+                    font-size: 16px;
+                    line-height: 25px;
+                }
+
+                .projectActions{
+                    padding: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        background-color: rgb(55, 55, 55);
+                        border: none;
+                        border-radius: 20px;                                                      
+                        padding: 8px 16px;
+                        font-family: $primaryfont;
+                        font-size: 16px;
+                    }
+                    a:hover{
+                        background-color: rgb(255, 130, 20);
+                    }
                 }
             }
         }
     }
 }
 
-@media only screen and (max-width: 1100px){
-    #prjcthd{
-        font-size: 70px;
-    }
-
-    #prjctgrd{
-        grid-template-columns: 500px;
-    }
-}
-
-@media only screen and (max-width: 540px){
-
-    #prjcthd{
-        font-size: 50px;
-    }
-
-    #prjctgrd{
-        display: flex;
+@media only screen and (max-width: 1000px){
+    #prjctcrd{
         flex-direction: column;
-        width: 100%;
-        padding: 0;
+        gap: 20px;
     }
 
     #prjctimg{
-        width: fit-content;
-        height: 200px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
-    
 }
 
-@media only screen and (max-width: 400px){
-
+@media only screen and (max-width: 600px){
     #prjcthd{
-        font-size: 40px;
+        span{
+            width: 60px;
+        }
+        font-size: 34px;
+        img{
+            width: 34px;
+            height: 34px;
+        }
     }
 
     #prjctnme{
-        font-size: 20px;
+        font-size: 26px;
     }
 
-    #vwprjctbtn{
-        padding: 6px 8px;
+    #prjctdcrp{
         font-size: 14px;
-        border-radius: 6px;
     }
 
-    #vwcdbtn{
-        padding: 6px 8px;
+    #vwbtn{
         font-size: 14px;
-        border-radius: 6px;
     }
 }
+
+@media only screen and (max-width: 400px){
+    #prjcthd{
+        span{
+            width: 40px;
+            height: 2px;
+        }
+        font-size: 24px;
+        img{
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    #prjctnme{
+        font-size: 18px;
+    }
+
+    #prjctdcrp{
+        font-size: 12px;
+    }
+
+    #vwbtn{
+        font-size: 12px;
+    }
+}
+
