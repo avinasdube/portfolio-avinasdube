@@ -80,19 +80,27 @@ footer {
                 }
             }
 
-            .copyright {
+            .message{
                 font-size: 14px;
-            }
-
-            .tagline {
-                font-size: 14px;
-                margin-top: -10px;
             }
         }
+    }
+
+    .copyright {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
     }
 }
 
 @media only screen and (max-width: 1000px) {
+    footer{
+        gap: 10px;
+    }
+
     #btm {
         flex-direction: column;
         gap: 40px;
@@ -115,11 +123,7 @@ footer {
             font-size: 40px;
         }
 
-        .copyright{
-            text-align: center;
-        }
-
-        .tagline{
+        .message{
             text-align: center;
         }
     }
@@ -175,11 +179,7 @@ footer {
             font-size: 24px;
         }
 
-        .copyright {
-            font-size: 12px;
-        }
-
-        .tagline {
+        .message {
             font-size: 12px;
         }
     }
@@ -190,5 +190,9 @@ footer {
             width: 40px;
             margin-left: -4px;
         }
+    }
+
+    #cprt{
+        font-size: 12px;
     }
 }

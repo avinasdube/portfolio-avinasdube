@@ -1,40 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Pirata+One&display=swap');
-
-// DEFAULT FONTS
-
-$primaryfont: 'Encode Sans', sans-serif;
-
-// LOADING SCREEN
-
-
-.classlaoder_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loading {
+    background-color: black;
     height: 100vh;
-    background-color: rgb(15, 15, 15);
-    color: white;
-    font-family: $primaryfont;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
 
-    .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .tagline {
-            font-size: 40px;
-        }
-
+    .tagline{
+        color: white;
+        width: 125px;
+        text-align: center;
     }
-}
 
-@media only screen and (max-width: 800px) {
-    .classlaoder_container {
-        .loading {
-            gap: 0px;
+    .progressBar{
+        display: flex;
 
-            .tagline {
-                font-size: 22px;
+        span{
+            width: 120px;
+            height: 1px;
+            background-color: rgb(149, 149, 149);
+            animation: progress 2s ease-in-out 0s normal 1 forwards;
+            border-radius: 20px;
+
+            @keyframes progress {
+                0%{
+                    width: 0;
+                }
+                20%{
+                    width: 20px;
+                }
+                40%{
+                    width: 50px;
+                }
+                60%{
+                    width: 75px;
+                }
+                80%{
+                    width: 100px;
+                }
+                100%{
+                    width: 120px;
+                }
+                
             }
         }
     }

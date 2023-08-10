@@ -4,9 +4,12 @@ import './LoadingScreen.scss';
 const LoadingScreen = () => {
   return (
     <>
-      <div className='classlaoder_container'>
-        <div className='loading'>
-          <div className='tagline'>सर्वं सम्भाव्यते त्वयि।</div>
+      <div className='loading'>
+        <div className='tagline'>
+          सर्वं सम्भाव्यते त्वयि।
+        </div>
+        <div className="progressBar">
+          <span></span>
         </div>
       </div>
     </>
