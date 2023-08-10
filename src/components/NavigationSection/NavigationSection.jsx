@@ -1,6 +1,6 @@
 import React from 'react';
 import './NavigationSection.scss';
-import mail from '../../images/icons/mail.png';
+import mail from '../../assets/icons/mail.png';
 
 const NavigationSection = () => {
   return (

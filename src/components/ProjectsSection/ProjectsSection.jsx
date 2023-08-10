@@ -11,6 +11,7 @@ const ProjectsSection = () => {
     const projects = [
         {
             id: 1,
+            type: 'web application',
             pImage: mytask,
             pName: 'my task - a simple task app',
             pDescrip: 'a functional task app with add, edit and delete task features. it uses localstorage feature to provide temporary data storage to remember previously added tasks.',
@@ -19,6 +20,7 @@ const ProjectsSection = () => {
         },
         {
             id: 2,
+            type: 'web application',
             pImage: calculator,
             pName: 'simple calculator app',
             pDescrip: 'a responsive calculator app with all basic functionalities',
@@ -27,6 +29,7 @@ const ProjectsSection = () => {
         },
         {
             id: 3,
+            type: 'web application',
             pImage: weatherin,
             pName: 'weather.in - a live weather app',
             pDescrip: 'a live weather application built in react and nodejs which uses openweatherapp.org api to fetch live weather data. it also features light/dark mode button for better viewing experience.',
@@ -47,6 +50,7 @@ const ProjectsSection = () => {
                                 <img src={project.pImage} alt=''></img>
                             </div>
                             <div className="projectAbout">
+                                <div className="projectType" id='prjctyp'>{project.type}</div>
                                 <div className="projectName" id='prjctnme'>{project.pName}</div>
                                 <div className="projectDescrip" id='prjctdcrp'>{project.pDescrip}</div>
                                 <div className="projectActions">
