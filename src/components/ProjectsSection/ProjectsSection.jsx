@@ -1,9 +1,10 @@
 import React from 'react';
 import './ProjectsSection.scss';
 
-import mytask from '../../images/mytasks.jpg';
-import calculator from '../../images/calculator.jpg';
-import weatherin from '../../images/weatherin.jpg';
+import mytask from '../../assets/images/mytasks.jpg';
+import calculator from '../../assets/images/calculator.jpg';
+import weatherin from '../../assets/images/weatherin.jpg';
+
 
 const ProjectsSection = () => {
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import './WelcomeSection.scss';
 
-
-import av49 from '../../images/av49.jpg';
+import av49 from '../../assets/images/av49.jpg';
 
 const WelcomeSection = () => {
   return (

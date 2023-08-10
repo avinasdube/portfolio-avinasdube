@@ -1,10 +1,10 @@
 import React from 'react';
 import './FooterSection.scss';
 
-import linkedin from '../../images/icons/linkedin.png';
-import instagram from '../../images/icons/instagram.png';
-import twitter from '../../images/icons/twitter.png';
-import github from '../../images/icons/github.png';
+import linkedin from '../../assets/icons/linkedin.png';
+import instagram from '../../assets/icons/instagram.png';
+import twitter from '../../assets/icons/twitter.png';
+import github from '../../assets/icons/github.png';
 
 const FooterSection = () => {
   return (
@@ -12,7 +12,7 @@ const FooterSection = () => {
           <div className='bottom' id='btm'>
             <div className='bottomleft'>
               <div className='hiremeHead' id='hrmhd'>
-                <span></span>hire me today !
+                <span></span>hire me today
               </div>
               <div className='hiremeDesc' id='hrmdsk'>
                 unlock your website's full potential with my expertise. hire me,
@@ -26,7 +26,7 @@ const FooterSection = () => {
 
             <div className='bottomright' id='btmrght'>
               <div className='connectHead' id='cncthd'>
-                <span></span>get in touch :
+                <span></span>get in touch
               </div>
               <div className='connectLogo' id='contlgo'>
                 <a href='https://www.linkedin.com/in/avinasdube/'><img src={linkedin} alt=''></img></a>
