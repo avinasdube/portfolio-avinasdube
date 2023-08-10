@@ -33,6 +33,7 @@ const ProjectsSection = () => {
             codeViewLink: 'https://github.com/avinasdube/weather.in'
         },
     ];
+    
 
     return (
         <div className='projectsSection'>
