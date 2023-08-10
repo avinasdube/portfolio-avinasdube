@@ -1,27 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio-avinasdube/static/css/main.df44e40a.css",
-    "main.js": "/portfolio-avinasdube/static/js/main.2c9c2fdd.js",
-    "static/media/notasks.png": "/portfolio-avinasdube/static/media/notasks.d3a308e4848277949722.png",
+    "main.css": "/portfolio-avinasdube/static/css/main.b1f958f7.css",
+    "main.js": "/portfolio-avinasdube/static/js/main.8aabd589.js",
     "static/media/weatherin.jpg": "/portfolio-avinasdube/static/media/weatherin.399ac5c0cdd4d5262ace.jpg",
     "static/media/av49.jpg": "/portfolio-avinasdube/static/media/av49.3b3f55af1c245b3f5e2e.jpg",
     "static/media/mytasks.jpg": "/portfolio-avinasdube/static/media/mytasks.84fbd20faa1a23b95175.jpg",
-    "static/media/design.png": "/portfolio-avinasdube/static/media/design.889fc23e3c2b44685b04.png",
     "static/media/calculator.jpg": "/portfolio-avinasdube/static/media/calculator.570615cda98fc0e41410.jpg",
-    "static/media/structure.png": "/portfolio-avinasdube/static/media/structure.4127b36258b5e9dc8f88.png",
-    "static/media/deploy.png": "/portfolio-avinasdube/static/media/deploy.4476516548924881ae42.png",
-    "static/media/nodejs.png": "/portfolio-avinasdube/static/media/nodejs.007e99f68b718e476aba.png",
-    "static/media/develop.png": "/portfolio-avinasdube/static/media/develop.ea42251e9f3632c3814b.png",
-    "static/media/html.png": "/portfolio-avinasdube/static/media/html.6e930594286d8afe4c79.png",
-    "static/media/css-3.png": "/portfolio-avinasdube/static/media/css-3.463e319bad8e0edf1ef7.png",
-    "static/media/js-file.png": "/portfolio-avinasdube/static/media/js-file.6b8f1d21e031c402a65f.png",
-    "static/media/git.png": "/portfolio-avinasdube/static/media/git.a00e31cd64596a16de37.png",
     "index.html": "/portfolio-avinasdube/index.html",
-    "main.df44e40a.css.map": "/portfolio-avinasdube/static/css/main.df44e40a.css.map",
-    "main.2c9c2fdd.js.map": "/portfolio-avinasdube/static/js/main.2c9c2fdd.js.map"
+    "main.b1f958f7.css.map": "/portfolio-avinasdube/static/css/main.b1f958f7.css.map",
+    "main.8aabd589.js.map": "/portfolio-avinasdube/static/js/main.8aabd589.js.map"
   },
   "entrypoints": [
-    "static/css/main.df44e40a.css",
-    "static/js/main.2c9c2fdd.js"
+    "static/css/main.b1f958f7.css",
+    "static/js/main.8aabd589.js"
   ]
 }
