@@ -12,7 +12,7 @@ const FooterSection = () => {
           <div className='bottom' id='btm'>
             <div className='bottomleft'>
               <div className='hiremeHead' id='hrmhd'>
-                <span className='span'></span>hire me today !
+                <span></span>hire me today !
               </div>
               <div className='hiremeDesc' id='hrmdsk'>
                 unlock your website's full potential with my expertise. hire me,
@@ -25,8 +25,8 @@ const FooterSection = () => {
             </div>
 
             <div className='bottomright' id='btmrght'>
-              <div className='connectHead' >
-                <span></span>connect with me on :
+              <div className='connectHead' id='cncthd'>
+                <span></span>get in touch :
               </div>
               <div className='connectLogo' id='contlgo'>
                 <a href='https://www.linkedin.com/in/avinasdube/'><img src={linkedin} alt=''></img></a>

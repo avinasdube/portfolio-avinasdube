@@ -17,7 +17,7 @@ const WelcomeSection = () => {
             world of web technology. i specialize in 
             mern stack and react gives me confidence. 
             i find similarity between writing codes and poetry.
-            my work defines my consistency. open sourcing drives
+            my work defines my ability and open sourcing drives
             me.
           </div>
         </div>

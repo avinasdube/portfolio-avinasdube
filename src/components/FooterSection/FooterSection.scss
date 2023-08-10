@@ -23,12 +23,16 @@ footer {
             gap: 20px;
 
             .hiremeHead {
-                span{
-                    background-color: saddlebrown;
-                    width: 40px;
-                    height: 40px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    background-color: black;
+                    width: 100px;
+                    height: 3px;
+                    margin-right: 10px;
                 }
-                
+
                 font-size: 60px;
                 font-weight: bolder;
             }
@@ -45,12 +49,16 @@ footer {
             gap: 20px;
 
             .connectHead {
-                span{
-                    background-color: red;
-                    width: 40px;
-                    height: 2px;
+                display: flex;
+                align-items: center;
+
+                span {
+                    background-color: black;
+                    width: 100px;
+                    height: 3px;
+                    margin-right: 10px;
                 }
-                
+
                 font-size: 60px;
                 font-weight: bolder;
             }
@@ -66,7 +74,7 @@ footer {
                     width: 50px;
                 }
 
-                img:hover{
+                img:hover {
                     transform: scale(1.04);
                     transition: 0.4s linear;
                 }
@@ -74,103 +82,103 @@ footer {
 
             .copyright {
                 font-size: 14px;
+                text-align: center;
             }
 
-            .tagline{
+            .tagline {
                 font-size: 14px;
+                margin-top: -5px;
+                text-align: center;
             }
         }
     }
 }
 
-@media only screen and (max-width: 1000px){
-    #btm{
+@media only screen and (max-width: 1000px) {
+    #btm {
         flex-direction: column;
         gap: 40px;
     }
 
-    #hrmhd{
-        span{
-            width: 40px;
-            height: 2px;
+    #hrmhd {
+        span {
+            width: 60px;
         }
-        
+
         font-size: 40px;
     }
 
-    #btmrght{
-        .connectHead{
-            span{
-                width: 40px;
-                height: 2px;
+    #btmrght {
+        .connectHead {
+            span {
+                width: 50px;
             }
-            
+
             font-size: 40px;
         }
     }
 }
 
-@media only screen and (max-width: 600px){
-    #hrmhd{
-        span{
-            width: 40px;
-            height: 2px;
+@media only screen and (max-width: 600px) {
+    #hrmhd {
+        span {
+            width: 50px;
         }
-        
+
         font-size: 30px;
     }
 
-    #hrmdsk{
+    #hrmdsk {
         font-size: 15px;
     }
 
-    #btmrght{
-        .connectHead{
-            span{
-                width: 40px;
-                height: 2px;
+    #btmrght {
+        .connectHead {
+            span {
+                width: 50px;
             }
-            
+
             font-size: 30px;
         }
     }
 
 }
 
-@media only screen and (max-width: 400px){
-    #hrmhd{
-        span{
+@media only screen and (max-width: 400px) {
+    #hrmhd {
+        span {
             width: 40px;
             height: 2px;
         }
-        
+
         font-size: 24px;
     }
 
-    #hrmdsk{
+    #hrmdsk {
         font-size: 12px;
         line-height: 20px;
     }
 
-    #btmrght{
-        .connectHead{
-            span{
+    #btmrght {
+        .connectHead {
+            span {
                 width: 40px;
                 height: 2px;
             }
-            
+
             font-size: 24px;
         }
-        .copyright{
+
+        .copyright {
             font-size: 12px;
         }
-        
-        .tagline{
+
+        .tagline {
             font-size: 12px;
         }
     }
 
-    #contlgo{
+    #contlgo {
         img {
             height: 40px;
             width: 40px;
