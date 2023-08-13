@@ -10,6 +10,7 @@ import ProjectsSection from './components/ProjectsSection/ProjectsSection';
 import FooterSection from './components/FooterSection/FooterSection';
 
 import { useEffect, useState } from 'react';
+import ResumeSection from './components/ResumeSection/ResumeSection';
 
 function App() {
 
@@ -31,8 +32,9 @@ function App() {
         (<div className="app">
           <NavigationSection />
           <WelcomeSection />
-          <QuoteSection />
+          <ResumeSection />
           <ProjectsSection />
+          <QuoteSection />
           <FooterSection />
         </div>)}
     </>
