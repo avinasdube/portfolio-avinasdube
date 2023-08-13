@@ -4,6 +4,7 @@ import './ProjectsSection.scss';
 import mytask from '../../assets/images/mytasks.jpg';
 import calculator from '../../assets/images/calculator.jpg';
 import weatherin from '../../assets/images/weatherin.jpg';
+import menhew from '../../assets/images/menhew.jpg';
 
 
 const ProjectsSection = () => {
@@ -36,6 +37,14 @@ const ProjectsSection = () => {
             pViewLink: 'https://avinasdube.github.io/weather.in/',
             codeViewLink: 'https://github.com/avinasdube/weather.in'
         },
+        {
+            id: 4,
+            type: 'web application',
+            pImage:  menhew,
+            pName: 'menhew fashion',
+            pDescrip: 'an e-commerce application for men clothing built using mern stack with strapi and stripe integration.',
+            codeViewLink: 'https://github.com/avinasdube/menhew-fashion',
+        }
     ];
     
 
