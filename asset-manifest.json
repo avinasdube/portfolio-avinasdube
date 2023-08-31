@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-avinasdube/static/css/main.e413f8e3.css",
-    "main.js": "/portfolio-avinasdube/static/js/main.f16091b7.js",
+    "main.js": "/portfolio-avinasdube/static/js/main.4cbcca7a.js",
     "static/media/menhew.jpg": "/portfolio-avinasdube/static/media/menhew.1e923b3e702d2a80af5f.jpg",
     "static/media/weatherin.jpg": "/portfolio-avinasdube/static/media/weatherin.399ac5c0cdd4d5262ace.jpg",
     "static/media/av49.jpg": "/portfolio-avinasdube/static/media/av49.3b3f55af1c245b3f5e2e.jpg",
@@ -9,10 +9,10 @@
     "static/media/calculator.jpg": "/portfolio-avinasdube/static/media/calculator.570615cda98fc0e41410.jpg",
     "index.html": "/portfolio-avinasdube/index.html",
     "main.e413f8e3.css.map": "/portfolio-avinasdube/static/css/main.e413f8e3.css.map",
-    "main.f16091b7.js.map": "/portfolio-avinasdube/static/js/main.f16091b7.js.map"
+    "main.4cbcca7a.js.map": "/portfolio-avinasdube/static/js/main.4cbcca7a.js.map"
   },
   "entrypoints": [
     "static/css/main.e413f8e3.css",
-    "static/js/main.f16091b7.js"
+    "static/js/main.4cbcca7a.js"
   ]
 }
