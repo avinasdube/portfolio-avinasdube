@@ -36,3 +36,5 @@ jobs:
         with:
           branch: gh-pages
           folder: . # Set to an empty string or remove this line if build artifacts are in the root
+          env:
+            ACCESS_TOKEN: ${{ secrets.GH_TOKEN }}
