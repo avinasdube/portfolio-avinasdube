@@ -1,10 +1,10 @@
 import React from 'react';
 import './ProjectsSection.scss';
 
-import mytask from '../../assets/images/mytasks.jpg';
+import listdown from '../../assets/images/listdown.jpg';
 import calculator from '../../assets/images/calculator.jpg';
 import weatherin from '../../assets/images/weatherin.jpg';
-
+import menhew from '../../assets/images/menhew.jpg';
 
 const ProjectsSection = () => {
 
@@ -12,23 +12,14 @@ const ProjectsSection = () => {
         {
             id: 1,
             type: 'web application',
-            pImage: mytask,
-            pName: 'my task - a simple task app',
-            pDescrip: 'a functional task app with add, edit and delete task features. it uses localstorage feature to provide temporary data storage to remember previously added tasks.',
-            pViewLink: 'https://avinasdube.github.io/responsive-todoapp/',
-            codeViewLink: 'https://github.com/avinasdube/responsive-todoapp'
+            pImage: listdown,
+            pName: 'listdown',
+            pDescrip: 'a beautiful and fully responsive to-do app built using nodejs and reactjs with redux implementation to facilitate efficient and reliable task management features.',
+            pViewLink: 'https://listdown.vercel.app/',
+            codeViewLink: 'https://github.com/avinasdube/listdown'
         },
         {
             id: 2,
-            type: 'web application',
-            pImage: calculator,
-            pName: 'simple calculator app',
-            pDescrip: 'a responsive calculator app with all basic functionalities',
-            pViewLink: 'https://avinasdube.github.io/modern-calculator/',
-            codeViewLink: 'https://github.com/avinasdube/modern-calculator'
-        },
-        {
-            id: 3,
             type: 'web application',
             pImage: weatherin,
             pName: 'weather.in - a live weather app',
@@ -36,6 +27,23 @@ const ProjectsSection = () => {
             pViewLink: 'https://avinasdube.github.io/weather.in/',
             codeViewLink: 'https://github.com/avinasdube/weather.in'
         },
+        {
+            id: 3,
+            type: 'web application',
+            pImage:  menhew,
+            pName: 'menhew fashion',
+            pDescrip: 'an e-commerce application for men clothing built using mern stack with strapi and stripe integration.',
+            codeViewLink: 'https://github.com/avinasdube/menhew-fashion',
+        },
+        {
+            id: 4,
+            type: 'web application',
+            pImage: calculator,
+            pName: 'simple calculator app',
+            pDescrip: 'a responsive calculator app with all basic functionalities',
+            pViewLink: 'https://avinasdube.github.io/modern-calculator/',
+            codeViewLink: 'https://github.com/avinasdube/modern-calculator'
+        }
     ];
     
 
