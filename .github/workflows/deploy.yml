@@ -1,0 +1,43 @@
+name: Deploy to Github Pages
+
+on: 
+    push:
+        branches: 
+            - main
+    pull_request:
+                branches: [dev, main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy: 
+            matrix:
+                node-version: [18.x]
+                steps:
+                    - name: Checkout repository
+                      uses: actions/checkout@v2
+              
+                    - name: Set up Node.js ${{ matrix.node-version }}
+                      uses: actions/setup-node@v1
+                      with:
+                        node-version: ${{ matrix.node-version }}
+              
+                    - name: Install dependencies
+                      run: |
+                        npm install
+              
+    deploy:
+        runs-on: ubuntu-latest
+        strategy: 
+            matrix:
+                node-version: [18.x]
+                steps:
+                    - name: Checkout repository
+                      uses: actions/checkout@v2
+                
+                    - name: Deploy to GitHub Pages
+                      uses: JamesIves/github-pages-deploy-action@3.7.1
+                      with:
+                        branch: gh-pages
+                        folder: build
+
