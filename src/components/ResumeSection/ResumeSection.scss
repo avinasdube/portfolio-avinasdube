@@ -1,0 +1,72 @@
+// DEFAULT FONTS
+
+$primaryfont: 'Encode Sans', sans-serif;
+
+.resumeSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-family: $primaryfont;
+    padding: 20px;
+    background-color: white;
+
+    .head {
+        a {
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 550;
+            color: black;
+            border-bottom: 2px solid black;
+            transition: 0.3s all ease-in;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: rgb(255, 130, 20);
+            border-bottom: 3px solid rgb(255, 130, 20);
+            font-weight: 600;
+        }
+    }
+
+    .resumeIcon {
+        img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    #hdng{
+        font-size: 26px;
+    }
+
+    #rimg{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #hdng{
+        font-size: 20px;
+    }
+
+    #rimg{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #hdng{
+        font-size: 18px;
+    }
+
+    #rimg{
+        width: 35px;
+        height: 35px;
+    }
+}
