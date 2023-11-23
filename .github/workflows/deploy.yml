@@ -3,9 +3,9 @@ name: Deploy to Github Pages
 on: 
     push:
         branches: 
-            - main
+            - master
     pull_request:
-                branches: [dev, main]
+                branches: [dev, master]
 
 jobs:
     build:
