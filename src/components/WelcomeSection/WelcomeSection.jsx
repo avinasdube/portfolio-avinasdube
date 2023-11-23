@@ -14,7 +14,7 @@ const WelcomeSection = () => {
           <div className='mlmid'>
             a web-developer fascinated by the change in
             world of web technology. i specialize in 
-            mern stack and react gives me confidence. 
+             <b> mern stack</b> and react gives me confidence. 
             i find similarity between writing codes and poetry.
             my work defines my ability and open sourcing drives
             me.
