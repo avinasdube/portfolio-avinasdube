@@ -10,7 +10,7 @@ const FooterSection = () => {
   return (
     <footer>
       <div className="copyright" id='cprt'>
-        
+
         <div className='connectLogo' id='contlgo'>
           <a href='https://www.linkedin.com/in/avinasdube/'><img src={linkedin} alt=''></img></a>
           <a href='http://www.instagram.com/avinas.dube/'><img src={instagram} alt=''></img></a>

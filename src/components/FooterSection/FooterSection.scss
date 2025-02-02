@@ -1,17 +1,38 @@
 @import '../../variables';
 
+// Variables for reusable values
+:root {
+    --gap-small: 10px;
+    --gap-medium: 20px;
+    --gap-large: 40px;
+    --transition: 0.4s linear;
+    --image-size: 50px;
+    --image-size-small: 30px;
+    --font-size-small: 12px;
+    --font-size-medium: 14px;
+    --font-size-large: 24px;
+    --font-size-xl: 30px;
+    --font-size-xxl: 40px;
+    --font-weight-light: 300;
+    --line-height-small: 20px;
+    --line-height-medium: 1.5;
+    --border-width: 2px;
+}
+
+// Base styles
 footer {
     display: flex;
     flex-direction: column;
     place-items: center;
-    gap: 40px;
-    padding: 20px 0;
+    gap: var(--gap-large);
+    padding: var(--gap-medium) 0;
 
     .copyright {
-        font-size: 14px;
+        font-size: var(--font-size-medium);
+        font-weight: var(--font-weight-light);
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: var(--gap-small);
         align-items: center;
         justify-content: center;
 
@@ -19,115 +40,45 @@ footer {
             flex: 100%;
             display: flex;
             justify-content: space-between;
-
+            gap: var(--gap-small);
 
             img {
-                height: 50px;
-                width: 50px;
-            }
+                height: var(--image-size);
+                width: var(--image-size);
+                transition: transform var(--transition);
 
-            img:hover {
-                transform: scale(1.04);
-                transition: 0.4s linear;
+                &:hover {
+                    transform: scale(1.04);
+                }
             }
         }
 
         #cprtdsc {
             font-family: $hindifont;
-            font-weight: 500;
+            font-weight: var(--font-weight-light);
         }
     }
 }
 
+// Responsive Design
 @media only screen and (max-width: 1000px) {
     footer {
-        gap: 10px;
+        gap: var(--gap-small);
     }
-
-    #btm {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    #hrmhd {
-        span {
-            width: 60px;
-        }
-
-        font-size: 40px;
-    }
-
-    #btmrght {
-        .connectHead {
-            span {
-                width: 50px;
-            }
-
-            font-size: 40px;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    #hrmhd {
-        span {
-            width: 50px;
-        }
-
-        font-size: 30px;
-    }
-
-    #hrmdsk {
-        font-size: 15px;
-    }
-
-    #btmrght {
-        .connectHead {
-            span {
-                width: 50px;
-            }
-
-            font-size: 30px;
-        }
-    }
-
 }
 
 @media only screen and (max-width: 400px) {
-    #hrmhd {
-        span {
-            width: 40px;
-            height: 2px;
-        }
 
-        font-size: 24px;
-    }
-
-    #hrmdsk {
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-    #btmrght {
-        .connectHead {
-            span {
-                width: 40px;
-                height: 2px;
-            }
-
-            font-size: 24px;
-        }
+    #cprt {
+        font-size: var(--font-size-small);
     }
 
     #contlgo {
         img {
-            height: 40px;
-            width: 40px;
+            height: var(--image-size-small);
+            width: var(--image-size-small);
             margin-left: -4px;
         }
     }
 
-    #cprt {
-        font-size: 12px;
-    }
 }
