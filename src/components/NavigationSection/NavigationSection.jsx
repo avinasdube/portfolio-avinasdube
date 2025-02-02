@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './NavigationSection.scss';
-import avtr from '../../assets/icons/avinas.png';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const NavigationSection = () => {
-
   const [transform, setTransform] = useState('translate(0px, 0px)');
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(location.pathname);
 
   const handleMouseMove = (event) => {
     const element = event.currentTarget;
@@ -35,16 +35,24 @@ const NavigationSection = () => {
     setTransform('translate(0px, 0px)');
   };
 
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+  };
+
   return (
     <div className="navigation" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
-      <div className='navbarContainer'>
+      <div className="navbarContainer">
         <div className="navMid" style={{ transform }}>
-          <div className="option"><Link className='link' to={'/'}>projects</Link></div>
-          <div className="option"><Link className='link' to={'/about'}>about</Link></div>
+          <div className={`option ${activeLink === '/' ? 'active' : ''}`}>
+            <Link className='link' to={'/'} onClick={() => handleLinkClick('/')}>projects</Link>
+          </div>
+          <div className={`option ${activeLink === '/about' ? 'active' : ''}`}>
+            <Link className='link' to={'/about'} onClick={() => handleLinkClick('/about')}>about</Link>
+          </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavigationSection
+export default NavigationSection;

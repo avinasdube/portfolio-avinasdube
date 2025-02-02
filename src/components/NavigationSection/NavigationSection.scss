@@ -20,26 +20,34 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      background-color: whitesmoke;
-      background: linear-gradient(to right, #fcfcfc, whitesmoke);
-      padding: 0.4rem;
+      background-color: rgba(255, 255, 255);
+      background: linear-gradient(to right, rgba(252, 252, 252, 0.8), rgba(245, 245, 245, 0.8));
+      backdrop-filter: blur(10px);
+      padding: 0.3rem;
       border-radius: 50px;
       transition: transform 0.4s ease;
 
-      .link {
-        text-decoration: none;
-        color: black;
-        font-size: 1.2rem;
-        font-weight: bold;
-        background: linear-gradient(to left, #000000, #808080);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      .option {
+        border-radius: 50px;
+        padding: 0.6rem;
+        transition: transform 0.8s ease;
+
+        .link {
+          text-decoration: none;
+          color: black;
+          font-size: 1.2rem;
+          font-weight: light;
+          background: linear-gradient(to left, #000000, #808080);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
 
-      .option {
-        padding: 0.5rem 1rem;
+      .active {
         background-color: white;
         border-radius: 50px;
+        font-weight: bold;
       }
     }
   }
@@ -51,4 +59,10 @@
   .navbarContainer {
     width: 80%;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .navigation{
+  }
+  
 }
