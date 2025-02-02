@@ -10,6 +10,7 @@ import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AboutMe from './components/About/AboutMe';
 import Layout from './layout/Layout';
+import FooterSection from './components/FooterSection/FooterSection';
 
 function App() {
 
@@ -24,8 +25,6 @@ function App() {
     }, 2000);
   }, []);
 
-  const [about, setAbout] = useState(false);
-
   return (
     <>
       {loading ? <LoadingScreen /> :
@@ -37,6 +36,7 @@ function App() {
               <Route exact path="/" element={<Layout />} />
               <Route path="/about" element={<AboutMe />} />
             </Routes>
+            <FooterSection />
           </Router>
         </div>)}
     </>
