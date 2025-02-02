@@ -18,9 +18,6 @@ const FooterSection = () => {
           <a href='https://github.com/avinasdube'><img src={github} alt=''></img></a>
         </div>
 
-        <div className="message">
-          this site is hand crafted with care by avinash dubey.
-        </div>
         <div>
           &copy; 2025 avinash dubey . all rights reserved
         </div>
