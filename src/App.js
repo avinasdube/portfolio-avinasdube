@@ -4,13 +4,12 @@ import './style.scss';
 
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import NavigationSection from './components/NavigationSection/NavigationSection';
-import WelcomeSection from './components/WelcomeSection/WelcomeSection';
-import QuoteSection from './components/QuoteSection/QuoteSection';
-import ProjectsSection from './components/ProjectsSection/ProjectsSection';
-import FooterSection from './components/FooterSection/FooterSection';
+
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { useEffect, useState } from 'react';
-import ResumeSection from './components/ResumeSection/ResumeSection';
+import AboutMe from './components/About/AboutMe';
+import Layout from './layout/Layout';
 
 function App() {
 
@@ -25,17 +24,20 @@ function App() {
     }, 2000);
   }, []);
 
+  const [about, setAbout] = useState(false);
+
   return (
     <>
       {loading ? <LoadingScreen /> :
 
         (<div className="app">
-          <NavigationSection />
-          <WelcomeSection />
-          <ResumeSection />
-          <ProjectsSection />
-          <QuoteSection />
-          <FooterSection />
+          <Router>
+            <NavigationSection />
+            <Routes>
+              <Route exact path="/" element={<Layout />} />
+              <Route path="/about" element={<AboutMe />} />
+            </Routes>
+          </Router>
         </div>)}
     </>
   )

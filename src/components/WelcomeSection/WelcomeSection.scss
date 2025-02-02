@@ -1,136 +1,98 @@
+@import '../../variables';
 
 // DEFAULT FONTS
 
-$primaryfont: 'Encode Sans', sans-serif;
-
 .welcomeSection {
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-family: $primaryfont;
-    margin-top: 70px;
-    background-color: white;
-    padding: 20px 0;
+    margin-top: 100px;
+    padding: 40px 0;
 
-    .headermid {
-        width: 90%;
+    .greet {
+        width: 60%;
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-align: center;
+        background: linear-gradient(to left, #000000, #808080);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.4s ease;
+    }
+
+    .basedIn {
         display: flex;
-        gap: 20px;
-        padding: 0;
-        margin-bottom: 20px;
+        gap: 10px;
+        padding: 1.4rem 0.5rem;
 
-        .midleft {
-            padding:0;
-            flex: 60%;
-            display: grid;
-            gap: 10px;
+        img {
+            width: 20px;
+            height: 20px;
 
-            .mlhead {
-                font-size: 80px;
-                font-weight: bolder;
-            }
+            &:hover {
+                transition: transform 0.4s ease;
+                animation: popUp;
 
-            .mlmid {
-                font-size: 16px;
-            }
-        }
+                @keyframes popUp {
+                    from {
+                        transform: scale(1);
+                    }
 
-        .midright {
-            flex: 40%;
-            display: grid;
-            align-items: center;
-            justify-content: right;
-
-            img {
-                height: 300px;
-                width: 300px;
-                border-top-left-radius: 40px;
-                border-bottom-right-radius: 40px;
+                    to {
+                        transform: scale(1.2);
+                    }
+                }
             }
         }
+
+        .place {
+            font-size: 1rem;
+            font-weight: bold;
+            background: linear-gradient(to right, #444444, #808080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .intro {
+        width: 40%;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #444444;
+        font-weight: 350;
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 768px) {
     // WELCOME SECTION STYLING
 
-    #hdrmd {
+    .welcomeSection {
+        padding: 30px 0;
 
-        #mdlft {
-            padding:0;
-            flex: 60%;
-            display: grid;
-            gap: 10px;
-            
-            .mlhead{
-                font-size: 64px;
-            }
-
-            .mlmid{
-                line-height: 25px;
-            }
-            
+        .greet {
+            width: 80%;
+            font-size: 2.5rem;
         }
 
-        #mdrght {
+        .basedIn {
 
             img {
-                height: 260px;
-                width: 260px;
+                width: 16px;
+                height: 16px;
             }
 
-        }
-
-        
-    }
-}
-
-@media only screen and (max-width: 800px) {
-    // WELCOME SECTION STYLING
-
-    #hdrmd {
-        flex-wrap: wrap;
-        gap: 20px;
-
-        #mdlft {
-            flex: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            
-            .mlhead{
-                flex: 100%;
-                font-size: 50px;
-            }
-
-            .mlmid{
-                width: 90%;
-                font-size: 15px;
-                line-height: 25px;
+            .place {
+                font-size: 0.8rem;
             }
         }
 
-        #mdrght {
-
-            img {
-                height: 100%;
-                width: 100%;
-            }
-
+        .intro {
+            width: 70%;
+            font-size: 1rem;
         }
     }
+
 }
-
-@media only screen and (max-width: 400px) {
-    #hdrmd {
-
-        #mdlft {
-            
-            .mlhead{
-                font-size: 46px;
-            }
-        }
-    }
-}
-
