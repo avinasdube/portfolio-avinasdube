@@ -9,7 +9,7 @@
 
   .aboutMeSubContainer {
     width: 50%;
-    padding: 4rem 2rem;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +20,12 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      height: 460px;
+      margin-top: 40px;
 
-      .midImg, .rightImg {
+      .midImg,
+      .rightImg {
+        position: absolute;
         width: 280px;
         height: 380px;
         border-radius: 40px;
@@ -34,11 +38,15 @@
         }
       }
 
+      .midImg {
+        margin-left: -220px;
+      }
+
       .rightImg {
         width: 380px;
         height: 280px;
-        margin-left: -100px;
-        margin-top: -200px;
+        margin-left: 200px;
+        margin-top: -260px;
         z-index: 0;
       }
 
@@ -58,6 +66,7 @@
         font-size: 2rem;
         font-weight: bold;
         background: linear-gradient(to left, #f12711, #f5af19);
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
@@ -65,6 +74,21 @@
       p {
         font-size: 1.2rem;
         font-weight: 300;
+
+        #lnk {
+          padding: 0rem 0.2rem;
+
+          text-decoration: none;
+          color: black;
+          font-weight: 500;
+          transition: all 0.4s ease; /* Simplify the transition property */
+        
+          &:hover {
+            border-radius: 6px;
+            background: linear-gradient(to right, rgb(180, 180, 180), rgba(245, 245, 245));
+          }
+        }
+        
       }
     }
   }
@@ -78,7 +102,9 @@
       width: 60%;
 
       .profileSection {
-        .midImg, .rightImg {
+
+        .midImg,
+        .rightImg {
           width: 220px;
           height: 340px;
         }
@@ -86,8 +112,6 @@
         .rightImg {
           width: 340px;
           height: 260px;
-          margin-left: -90px;
-          margin-top: -180px;
         }
       }
     }
@@ -100,7 +124,10 @@
       width: 70%;
 
       .profileSection {
-        .midImg, .rightImg {
+        height: 300px;
+
+        .midImg,
+        .rightImg {
           width: 180px;
           height: 280px;
         }
@@ -108,7 +135,7 @@
         .rightImg {
           width: 280px;
           height: 220px;
-          margin-left: -80px;
+          margin-left: 80px;
           margin-top: -150px;
         }
       }
@@ -120,6 +147,32 @@
 
         p {
           font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutMeContainer {
+    .aboutMeSubContainer {
+      width: 80%;
+
+      .profileSection {
+        height: 300px;
+
+        .midImg,
+        .rightImg {
+          width: 180px;
+          height: 240px;
+          margin-left: -140px;
+        }
+
+        .rightImg {
+          width: 240px;
+          height: 200px;
+          margin-left: 50px;
+          margin-top: -200px;
         }
       }
     }

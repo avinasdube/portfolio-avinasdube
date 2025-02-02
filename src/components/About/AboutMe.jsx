@@ -50,8 +50,44 @@ const AboutMe = () => {
                 <div className="detailSection">
                     <h1>namaskar! i'm avinash dubey</h1>
                     <p>
-                        I am a software engineer with a passion for creating web applications. I
-                        have experience with JavaScript, React, Node.js, and other technologies.
+                        i'm a developer who finds joy in creating and building things from scratch.
+                        i'm proficient in the MERN stack, C, and C++, and i'm currently diving deep
+                        into Python to explore the realms of data science, machine learning, and AI.
+                        my journey in programming has always been fueled by a passion for solving
+                        problems and bringing ideas to life. currently, i'm pursuing my master's in 
+                        computer applications from  <a href='https://www.galgotiasuniversity.edu.in/' id='lnk'>galgotias university, greater noida</a>.
+                        
+
+                        <br></br>
+                        <br></br>
+
+                        programming, to me, is like poetry. each line of code is like a line of verse—meticulously
+                        crafted, thoughtful, and expressive. just as a poet uses words to convey emotions and stories,
+                        i use code to create digital experiences. the beauty lies in the simplicity and elegance of
+                        a well-written function, much like a well-composed poem.
+
+                        <br></br>
+                        <br></br>
+
+                        i always try to bring a unique blend of technical skills and a creative mindset.
+                        i don't just write code; i create solutions that are intuitive and impactful. my approach
+                        to development is holistic—i see the bigger picture and understand how each piece fits together.
+
+                        <br></br>
+                        <br></br>
+
+                        in programming, i see patterns and rhythms akin to those in poetry. this perspective allows me
+                        to approach coding with a unique sensibility, balancing logic with creativity. whether it's
+                        optimizing an algorithm or designing a user interface, i strive to create work that resonates
+                        on a deeper level.
+
+                        <br></br>
+                        <br></br>
+
+                        to sum it up, i'm a coder who finds poetry in algorithms, a developer who sees beauty in code, 
+                        and a lifelong learner driven by curiosity and a desire to create meaningful change.
+
+
                     </p>
                 </div>
             </div>
