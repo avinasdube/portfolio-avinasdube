@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio-avinasdube/static/css/main.25e62d70.css",
+    "main.css": "/portfolio-avinasdube/static/css/main.cf700bbf.css",
     "main.js": "/portfolio-avinasdube/static/js/main.5fdc301b.js",
     "static/media/indiagate.JPG": "/portfolio-avinasdube/static/media/indiagate.34f146915b3d5af58f96.JPG",
     "static/media/avinas.jpg": "/portfolio-avinasdube/static/media/avinas.bfb9e563eba899030845.jpg",
@@ -9,11 +9,11 @@
     "static/media/listdown.jpg": "/portfolio-avinasdube/static/media/listdown.1628f29e99f801f8bf2b.jpg",
     "static/media/calculator.jpg": "/portfolio-avinasdube/static/media/calculator.570615cda98fc0e41410.jpg",
     "index.html": "/portfolio-avinasdube/index.html",
-    "main.25e62d70.css.map": "/portfolio-avinasdube/static/css/main.25e62d70.css.map",
+    "main.cf700bbf.css.map": "/portfolio-avinasdube/static/css/main.cf700bbf.css.map",
     "main.5fdc301b.js.map": "/portfolio-avinasdube/static/js/main.5fdc301b.js.map"
   },
   "entrypoints": [
-    "static/css/main.25e62d70.css",
+    "static/css/main.cf700bbf.css",
     "static/js/main.5fdc301b.js"
   ]
 }
