@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './WelcomeSection.scss';
-
-import av49 from '../../assets/images/av49.jpg';
+import locat from '../../assets/icons/locat.png';
 
 const WelcomeSection = () => {
+  const [transform, setTransform] = useState('translate(0px, 0px)');
+
+  const handleMouseMove = (event) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const mouseY = event.clientY - rect.top;
+
+    const moveX = mouseX > rect.width / 2 ? 5 : -5;
+    const moveY = mouseY > rect.height / 2 ? 5 : -5;
+
+    setTransform(`translate(${moveX}px, ${moveY}px)`);
+  };
+
+  const handleMouseLeave = () => {
+    setTransform('translate(0px, 0px)');
+  };
+
   return (
-    <div className='welcomeSection'>
-      <div className='headermid' id='hdrmd'>
-        <div className='midleft' id='mdlft'>
-          <div className='mlhead' id='mlhd'>
-            namaskar, i am avinash dubey
-          </div>
-          <div className='mlmid'>
-            a web-developer fascinated by the change in
-            world of web technology. i specialize in 
-             <b> mern stack</b> and react gives me confidence. 
-            i find similarity between writing codes and poetry.
-            my work defines my ability and open sourcing drives
-            me.
-          </div>
-        </div>
-        <div className='midright' id='mdrght'>
-          <img src={av49} alt='none'></img>
-        </div>
+    <div className='welcomeSection' onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
+      <div className="greet" id='grt' style={{ transform }}>namaskar, i am avinash</div>
+      <div className="basedIn">
+        <img src={locat} alt="Location icon" />
+        <div className="place">greater noida, up</div>
+      </div>
+      <div className="intro">
+        <p>currently, learning python and exploring the world of data science and machine learning.</p>
       </div>
     </div>
-  )
+  );
 }
 
 export default WelcomeSection;

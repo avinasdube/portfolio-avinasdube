@@ -1,5 +1,7 @@
+@import '../../variables';
+
 .loading {
-    background-color: black;
+    background-color: whitesmoke;
     height: 100vh;
     width: auto;
     display: flex;
@@ -9,9 +11,11 @@
     justify-content: center;
 
     .tagline{
-        color: white;
+        color: black;
         width: 125px;
         text-align: center;
+        font-family: $hindifont;
+        font-weight: 600;
     }
 
     .progressBar{

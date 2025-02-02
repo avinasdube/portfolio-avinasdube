@@ -1,63 +1,54 @@
-// DEFAULT FONTS
+@import '../../variables';
 
-$primaryfont: 'Encode Sans', sans-serif;
-
-.projectsSection{
+.projectsSection {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: space-between;
     font-family: $primaryfont;
-    padding: 20px 0;
     background-color: white;
 
-    .projectsHead{
-        display: flex;
-        align-items: center;
-        width: 90%;
-        font-size: 45px;
-        font-weight: bolder;
-
-        span{
-            background-color: black;
-            width: 100px;
-            height: 3px;
-            margin-right: 10px;
-        }
-        
-    }
-
-    .projectsGrid{
-        width: 90%;
+    .projectsGrid {
+        width: 60%;
         display: flex;
         flex-direction: column;
         row-gap: 40px;
         padding: 20px 0;
 
-        .projectCard{
+        .projectCard {
             display: flex;
-            gap: 50px;
+            min-height: 300px;
+            gap: 20px;
+            background-color: whitesmoke;
+            padding: 1rem;
+            margin: 0;
+            border-radius: 40px;
+            transition: transform 0.4s ease;
+            animation: zoomCard;
+            animation-timeline: view();
 
-            .projectImage{
-
-                img{
-                    width: 540px;
-                    height: 300px;
-                    object-fit: cover;
-                    border-radius: 10px;
+            @keyframes zoomCard {
+                from{
+                    transform: scale(0.8);
+                }
+                to{
+                    transform: scale(1);
                 }
             }
 
-            
+            &:hover {
+                background-color: white;
+                box-shadow: 0 0 24px whitesmoke;
+            }
 
-            .projectAbout{
-                width: 100%;
+            .projectAbout {
+                flex: 2;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
 
-                .projectType{
+                .projectType {
                     width: fit-content;
                     background-color: rgb(226, 226, 226);
                     border-radius: 20px;
@@ -65,34 +56,86 @@ $primaryfont: 'Encode Sans', sans-serif;
                     font-size: 14px;
                 }
 
-                .projectName{
-                    font-family: $primaryfont;
-                    font-size: 40px;
+                .projectName {
+                    font-size: 1.5rem;
                     font-weight: bolder;
                 }
 
-                .projectDescrip{
-                    font-size: 16px;
-                    line-height: 20px;
+                .projectDescrip {
+                    font-size: 1rem;
+                    line-height: 1.25rem;
+                    font-weight: 300;
+                    color: gray;
                 }
 
-                .projectActions{
+                .projectActions {
                     padding: 10px 0;
                     display: flex;
                     justify-content: space-between;
+                    gap: 20px;
 
-                    a{
+                    a {
                         text-decoration: none;
                         color: white;
                         background-color: rgb(55, 55, 55);
                         border: none;
-                        border-radius: 20px;                                                      
+                        border-radius: 20px;
                         padding: 8px 16px;
                         font-family: $primaryfont;
-                        font-size: 16px;
+                        font-size: 0.8rem;
                     }
-                    a:hover{
+
+                    a:hover {
                         background-color: rgb(255, 130, 20);
+                    }
+                }
+            }
+
+            .projectImage{
+                flex: 3;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .projectsSection {
+        .projectsGrid {
+            width: 80%;
+        }
+
+        .projectCard {
+            flex-direction: column;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .projectsSection {
+        .projectsGrid {
+
+            .projectCard {
+                flex-direction: column;
+                gap: 20px;
+
+                .projectAbout {
+                    .projectName {
+                        font-size: 1.2rem;
+                    }
+
+                    .projectDescrip {
+                        font-size: 0.875rem;
+                    }
+
+                    .projectActions a {
+                        font-size: 0.8rem;
                     }
                 }
             }
@@ -100,85 +143,25 @@ $primaryfont: 'Encode Sans', sans-serif;
     }
 }
 
-@media only screen and (max-width: 1000px){
-
-    #prjcthd{
-        span{
-            width: 60px;
-        }
-
-        font-size: 40px;
-    }
-    
-    #prjctcrd{
-        flex-direction: column;
-        gap: 20px;
+@media only screen and (max-width: 400px) {
+    .projectsGrid {
+        width: 100%;
     }
 
-    #prjctimg{
-        img{
-            width: 100%;
-            height: 102%;
-        }
-    }
-
-    #prjctnme{
-        font-size: 30px;
-    }
-}
-
-@media only screen and (max-width: 600px){
-    #prjcthd{
-        span{
-            width: 50px;
-        }
-
-        font-size: 30px;
-        
-    }
-
-    #prjctyp{
-        font-size: 13px;
-    }
-
-    #prjctnme{
-        font-size: 20px;
-    }
-
-    #prjctdcrp{
-        font-size: 14px;
-    }
-
-    #vwbtn{
-        font-size: 14px;
-    }
-}
-
-@media only screen and (max-width: 400px){
-    #prjcthd{
-        span{
-            width: 40px;
-            height: 2px;
-        }
-
-        font-size: 24px;
-    }
-
-    #prjctyp{
-        font-size: 10px;
+    .projectType {
+        font-size: 0.75rem;
         padding: 3px 6px;
     }
 
-    #prjctnme{
-        font-size: 18px;
+    .projectName {
+        font-size: 1rem;
     }
 
-    #prjctdcrp{
-        font-size: 12px;
+    .projectDescrip {
+        font-size: 0.75rem;
     }
 
-    #vwbtn{
-        font-size: 12px;
+    .projectActions a {
+        font-size: 0.75rem;
     }
 }
-

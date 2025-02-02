@@ -1,6 +1,4 @@
-// DEFAULT FONTS
-
-$primaryfont: 'Encode Sans', sans-serif;
+@import '../../variables';
 
 .designQuote {
     display: flex;
@@ -13,6 +11,6 @@ $primaryfont: 'Encode Sans', sans-serif;
         font-family: $primaryfont;
         font-size: 40px;
         text-align: center;
-        width: 70%;
+        width: 60%;
     }
 }
