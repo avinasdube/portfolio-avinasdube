@@ -5,6 +5,7 @@ import listdown from '../../assets/images/listdown.jpg';
 import calculator from '../../assets/images/calculator.jpg';
 import weatherin from '../../assets/images/weatherin.jpg';
 import menhew from '../../assets/images/menhew.jpg';
+import ScrollAnimation from '../ScrollAnimation/ScrollAnimation';
 
 const ProjectsSection = () => {
   const projects = [
@@ -45,6 +46,8 @@ const ProjectsSection = () => {
       codeViewLink: 'https://github.com/avinasdube/modern-calculator'
     }
   ];
+
+  ScrollAnimation();
 
   return (
     <div className='projectsSection'>
