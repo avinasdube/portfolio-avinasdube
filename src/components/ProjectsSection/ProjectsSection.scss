@@ -4,9 +4,12 @@
 @keyframes zoomCard {
     from {
         transform: scale(0.8);
+        opacity: 0;
     }
+
     to {
         transform: scale(1);
+        opacity: 1;
     }
 }
 
@@ -52,13 +55,9 @@
             padding: 1rem;
             border-radius: var(--radius-large);
             transition: var(--transition);
-            animation: zoomCard;
-            animation-timeline: view();
-
-            &:hover {
-                background-color: white;
-                box-shadow: var(--shadow);
-            }
+            opacity: 0;
+            transform: scale(0.8);
+            transition: transform 0.4s ease, opacity 0.4s ease;
 
             .projectAbout {
                 flex: 2;
@@ -119,6 +118,18 @@
                     object-fit: cover;
                     border-radius: var(--radius-small);
                 }
+            }
+        }
+
+        .projectCard.visible {
+            opacity: 1;
+            transform: scale(1);
+            animation: zoomCard 0.4s ease;
+
+            &:hover {
+                background-color: white;
+                box-shadow: var(--shadow);
+                transform: scale(1.06);
             }
         }
     }
