@@ -5,7 +5,7 @@ import listdown from '../../assets/images/listdown.jpg';
 import calculator from '../../assets/images/calculator.jpg';
 import weatherin from '../../assets/images/weatherin.jpg';
 import menhew from '../../assets/images/menhew.jpg';
-import ScrollAnimation from '../ScrollAnimation/ScrollAnimation';
+import ScrollAnimation from '../ScrollAnimation/ScrollAnimation.jsx';
 
 const ProjectsSection = () => {
   const projects = [
