@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import avinas from '../../assets/images/avinas.jpg';
+import avinas from '../../assets/images/avinash.jpg';
 import indiagate from '../../assets/images/indiagate.JPG';
 import './AboutMe.scss';
+import Skills from '../Skills/Skills.jsx';
 
 const AboutMe = () => {
 
@@ -87,9 +88,10 @@ const AboutMe = () => {
                         to sum it up, i'm a coder who finds poetry in algorithms, a developer who sees beauty in code, 
                         and a lifelong learner driven by curiosity and a desire to create meaningful change.
 
-
                     </p>
                 </div>
+
+                <Skills />
             </div>
         </div>
     );

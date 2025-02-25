@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     .profileSection {
       display: flex;
@@ -121,41 +121,6 @@
 @media screen and (max-width: 768px) {
   .aboutMeContainer {
     .aboutMeSubContainer {
-      width: 70%;
-
-      .profileSection {
-        height: 300px;
-
-        .midImg,
-        .rightImg {
-          width: 180px;
-          height: 280px;
-        }
-
-        .rightImg {
-          width: 280px;
-          height: 220px;
-          margin-left: 80px;
-          margin-top: -150px;
-        }
-      }
-
-      .detailSection {
-        h1 {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .aboutMeContainer {
-    .aboutMeSubContainer {
       width: 80%;
 
       .profileSection {
@@ -173,6 +138,17 @@
           height: 200px;
           margin-left: 50px;
           margin-top: -200px;
+        }
+
+        .detailSection {
+          background-color: saddlebrown;
+          h1 {
+            font-size: 1.5rem;
+          }
+  
+          p {
+            font-size: 0.8rem;
+          }
         }
       }
     }
