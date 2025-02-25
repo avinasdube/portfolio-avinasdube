@@ -1,0 +1,38 @@
+@import '../../variables';
+
+.skillsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        background: linear-gradient(to left, #f12711, #f5af19);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .skillCards{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1.4rem;
+        row-gap: 0rem;
+        justify-content: space-evenly;
+
+        .skillCard p{
+            height: fit-content;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 40px;
+            font-weight: 500;
+            background: rgb(235, 235, 235);
+
+            &:hover{
+                background: $a;
+                color: white;
+            }
+        }
+    }
+}
